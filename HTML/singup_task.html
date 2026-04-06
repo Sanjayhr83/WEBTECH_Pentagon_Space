@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup-task</title>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            height:100vh;
+            width:100vw;
+            /* border:10px solid red ; */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            background-color: rgb(198, 236, 241);
+        }
+        div{ 
+            height:570px;
+            width:400px;
+            /* border:2px solid black ; */
+            padding-left: 20px;
+            background-color: white;
+            border-radius: 15px;
+        }
+        #form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #username{
+            height:20px;
+            width:360px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        #fullname{
+            height:20px;
+            width:360px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        #lastname{
+            height:20px;
+            width:360px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        #phoneno{
+            height:20px;
+            width:360px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        #email{
+            height:20px;
+            width:360px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        #password{
+            height:20px;
+            width:360px;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        #agree{
+            margin-left:50px;
+            cursor:pointer;
+        }
+        #submit{
+            color:white;
+            height:39px;
+            width:380px;
+            padding: 3px;
+            border-radius: 5px;
+            background-color: rgb(35, 80, 186);
+            cursor:pointer;
+        }
+        #login{
+            padding-top:50px;
+            margin-left:80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="singup">
+        <h1 id="form">Signup Form</h1>
+        <input id="username" type="text" placeholder="Username" required><br><br>
+        <input type="text" id="fullname" placeholder="Full Name"><br><br>
+        <input type="text" id="lastname" placeholder="Last Name"><br><br>
+        <input type="number" id="phoneno" placeholder="Number"required><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <input type="text" id="password" placeholder="Password" required><br><br>
+        <input type="checkbox" id="agree">I agree to the Terms & Conditions<br><br>
+        <button type="submit" id="submit">Singup</button><br><br>
+        <span id="login">Already have an account?<a href="./login.html">Login</a></span>
+    </div>
+</body>
+</html>

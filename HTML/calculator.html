@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./calucator.css">
+</head>
+<body>
+    <div id="calciholder">
+        <div id="calci">
+            <div id="innerbox">
+                <input type="text" id="input" readonly  placeholder="0">
+            </div>
+            <div id="innerbox">
+                <button id="value0" onclick="add()">+</button>
+                <button id="value0" onclick="sub()">-</button>
+                <button id="value0" onclick="mul()">x</button>
+                <button id="value0" onclick="divi()">%</button>
+            </div>
+            <div id="innerbox">
+                <button id="value1">7</button>
+                <button id="value1">8</button>
+                <button id="value1">9</button>
+                <button id="value1">4</button>
+            </div>
+            <div id="innerbox">
+                <button id="value2">5</button>
+                <button id="value2">6</button>
+                <button id="value2">1</button>
+                <button id="value2">2</button>
+            </div>
+            <div id="innerbox">
+                <button id="value3">3</button>
+                <button id="value3">0</button>
+                <button id="value3">.</button>
+                <button id="clean-btn">C</button>
+            </div>
+            <div id="innerbox">
+                <button id="value4" style="padding:20px;">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Calculator functionality would go here
+         function add()
+         {
+            let a=Number(prompt("Enter first number"));
+            let b=Number(prompt("Enter second number"));
+            console.log(`The sum of ${a} and ${b} is ${a+b}`);
+         }
+
+         function sub()
+         {
+            let a=Number(prompt("Enter first number"));
+            let b=Number(prompt("Enter second number"));
+            console.log(`The subtraction of ${a} and ${b} is ${a-b}`);
+         }
+         function mul()
+         {
+            let a=Number(prompt("Enter first number"));
+            let b=Number(prompt("Enter second number"));
+            console.log(`The product of ${a} and ${b} is ${a*b}`);
+         }
+         function divi()
+         {
+            let a=Number(prompt("Enter first number"));
+            let b=Number(prompt("Enter second number"));
+            console.log(`The quotient of ${a} and ${b} is ${a/b}`);
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <style>
+        #main-title {
+            color: blue;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        div h1{
+            color: greenyellow;
+        }
+
+        div > h2{
+            background-color: aqua;
+        }
+
+        div  + h3{
+            background-color: lightcoral;
+        }
+
+        div ~ h4{
+            background-color: purple;
+            color: white;
+        }
+
+        a:link{
+            color:green;
+        }
+        a:visited{
+            color:rgb(243, 140, 6);
+        }
+        a:active{
+            color: red;
+        }
+        a:hover{
+            color: yellow;
+        }
+
+        h6:first-child{
+            color: yellow;
+        }
+        h6:last-child{
+            color:red;
+        }
+        h6:nth-child(odd){
+            color:rgb(72, 255, 0);
+        }
+        h6:first-of-type{
+            color:red;
+        }
+        h6:last-of-type{
+            color:yellow;
+        }
+
+        pre::before {
+            content: "👉 ";
+        }
+        pre::after{
+            content:" 👈";
+        }
+        pre::first-letter{
+            font-size: 200%;
+            color: red;
+        }
+        pre::first-line{
+            font-weight: bold;
+            background-color: darkgoldenrod;
+        }pre::selection{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!--simple selector(id#,class.,tag,group,,universal*) example-->
+
+    <h1 id="main-title">1.simple selectors</h1>
+    <p class="highlight">This paragraph is highlighted.</p>
+    <p>This paragraph is not highlighted.</p><br>
+
+    <!--combinator selector(desendant , child>, adjacent sibling+, general sibling~) example-->
+    <!--desendant selectors-->
+    <h1>2.combinator selector</h1>
+    <h1>desendat selector</h1>
+    <div>
+        <h1>heading1</h1>
+        <h1>heading2</h1>
+        <h1>heading3</h1>
+        <span>
+            <h1>heading4</h1>
+        </span>
+    </div>
+
+    <!--child selector-->
+    <h1>child selector</h1>
+    <div>
+        <h2>hii1</h2>
+        <h2>hii2</h2>
+        <span>
+            <h2>hii3</h2>
+        </span>
+    </div>
+
+    <!--adjacent sibling selector-->
+    <h1>adjacent sibling selector</h1>
+    <div>
+        <h3>hello1</h3>
+        <h3>hello2</h3>
+        <h3>hello3</h3>
+    </div>
+    <h3>hello4</h3>
+
+    <!--general sibling selector-->
+    <h1>general sibling selector</h1>
+    <div>
+        <h4>welcome1</h4>
+        <h4>welcome2</h4>
+    </div>
+    <h4>welcome3</h4>
+
+    <!--pseudo-class selectors-->
+    <h1>3.pseudo-class selectors</h1>
+    <h5>dynamic pseudo-class</h5>
+    <a href="https://www.swiggy.com">Swiggy</a>
+
+    <h5>structural pseudo-class</h5>
+    <h6>welcome</h6>
+    <h6>welcome</h6>
+    <h6>welcome</h6>
+    <h6>welcome</h6>
+    <h6>welcome</h6>
+
+    <!--pseudo-element selectors-->
+    <h1>4.pseudo-element selectors</h1>
+    <div>
+        <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+A architecto sed odit itaque inventore soluta maxime quasi? Molestias voluptates quis aliquid eius, exercitationem, saepe minus libero debitis dicta ad,
+reiciendis provident assumenda corrupti? Id, itaque temporibus?</pre>
+    </div>
+    <!--Attribute selectors-->
+
+    
+</body>
+</html>

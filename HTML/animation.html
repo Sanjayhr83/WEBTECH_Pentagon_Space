@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #div1{
+            height:200px;
+            width:200px;
+            background-color: gold;
+            animation-name: colorchange;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-duration: normal;
+        }
+        @keyframes colorchange{
+            from{
+                background-color: gold;
+            }
+            to{
+                background-color: aqua;
+            }
+        }
+        #div2{
+        height: 200px;
+        width: 200px;
+        position: relative;
+        background-color: goldenrod;
+        animation-name: colorchange;
+        animation-duration: 5s;
+        animation-timing-function: ease;/*linear,ease,ease-in,ease-out,ease-in-out*/
+        animation-delay: 0.3s;
+        animation-iteration-count: infinite;/*1,2,infinite*/
+        animation-direction: normal;/*normal,reverse,alternate,alternate-reverse*/
+      }
+
+      @keyframes colorchange {
+        0% {
+          top: 0;
+          left: 0;
+          background-color: gold;
+        }
+        25% {
+          top: 0;
+          left: 600px;
+          background-color: aqua;
+        }
+        50% {
+          background-color:tomato;
+          top: 600px;
+          left: 600px;
+        }
+        75% {
+          background-color:azure;
+          top: 600px;
+          left: 0px;
+        }
+        100% {
+          background-color:rgb(1, 219, 70);
+          top: 0px;
+          left: 0px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div id="div1"></div><br><br><br>
+    <div id="div2"></div>
+</body>
+</html>

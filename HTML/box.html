@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX-MODEL</title>
+    <style>
+        /*remove default spacing or global resetting*/
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+
+        /*padding*/
+        /*method 1*/
+        /*
+        h1{
+            padding-left:10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom:10px;
+        }*/
+        /*method 2*/
+        h1{
+            padding: 25px 500px 25px 650px;
+        }
+
+        /*border*/
+        /*method1*/
+        /*
+        border:20px solid black;
+        */
+        /*method 2*/
+        h1{
+            border-width: 10px;
+            border-style:solid;
+            border-right-color:coral;
+            border-bottom-style: dotted;
+            border-bottom-color: red;
+            border-top-style:dashed;
+            border-top-color:green;
+            border-left-color: yellow;
+            border-radius: 20px;
+        }
+        /*margin*/
+        /*method 1*/
+        /*
+        margin:20px 20px 20px 20px;
+        */
+        /*method 2*/
+        h1{
+            margin-left:10px;
+            margin-right:10px;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <!--content,padding,border,margin-->
+    <h1>Web Technology</h1>
+</body>
+</html>

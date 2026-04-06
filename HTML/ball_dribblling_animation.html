@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball-Dribling</title>
+    <style>
+        *{
+            background-image: url(https://img.freepik.com/premium-photo/green-grass-football-stadium-background-with-bright-lights-field-activity-soccer-football_817921-9528.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #img1{
+            height:150px;
+            width:150px;
+            position:relative;
+            animation:football 3s ease 0s infinite alternate-reverse;
+            background-image: none;
+        }
+        @keyframes football{
+            0%{
+                top:0;
+                bottom:0;
+                transform: rotate(360deeg);
+            }
+            50%{
+                top:500px;
+                bottom: 0;
+                transform: rotate(360deg);
+            }
+            100%{
+                top:0;
+                bottom:0;
+                transform: rotate(360deg);
+            }
+        }
+        #img2{
+            height:150px;
+            width:150px;
+            position: relative;
+            background: none;
+            top:550px;
+            left:900px;
+            animation: ballrolling 3s ease 0s infinite alternate-reverse;
+        }
+        @keyframes ballrolling{
+            0%{
+                left:0;
+                right:0;
+                transform: rotate(360deg);
+            }
+            50%{
+                left:900px;
+                right:0;
+                ransform: rotate(360deg);
+            }
+            100%{
+                left:0;
+                right:0;
+                ransform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="img1" src="https://static.vecteezy.com/system/resources/thumbnails/027/314/399/small/soccer-ball-football-balls-isolated-sports-fitness-and-game-symbol-icon-3d-render-illustration-png.png" alt="">
+
+    <img src="https://pngimg.com/uploads/football/football_PNG52750.png" alt="" id="img2">
+</html>

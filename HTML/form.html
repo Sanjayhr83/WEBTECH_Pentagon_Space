@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <!--create form using fields like firstname,lastname,username,password,dob,phnumber,skills,gender,address,files option, create and cancel buttons-->
+    <form action="./index.html">
+        <fieldset>
+            <legend>Student Information</legend>
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required placeholder="enter first name"><br><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required placeholder="enter last name"><br><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required placeholder="enter username"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="enter password"><br><br>
+
+            <label for="dob">DOB:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="phnumber">Phone Number:</label>
+            <input type="number" id="phnumber" name="phnumber" required maxlength="10" placeholder="enter phone number"><br><br>
+
+            <label for="skills">Skills:</label><br>
+            <input type="checkbox" id="skills" name="skills" value="Full Stack">Full Stack
+            <input type="checkbox" id="skills" name="skills" value="Python">Python
+            <input type="checkbox" id="skills" name="skills" value="Java">Java
+            <input type="checkbox" id="skills" name="skills" value="C">C
+            <input type="checkbox" id="skills" name="skills" value="C++">C++<br><br>
+
+            <label for="gender" required>Gender:</label><br>
+            <input type="radio" id="gender" name="gender" value="Male">Male
+            <input type="radio" id="gender" name="gender" value="Female">Female
+            <input type="radio" id="gender" name="gender" value="Other">Other<br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" placeholder="Enter your Address"></textarea><br><br>
+
+            <label for="files">Upload ID Files:</label><br>
+            <input type="file" id="files" name="files" multiple><br><br>
+
+            <button type="submit">Create</button>
+            <button type="reset">Cancel</button>
+        </fieldset>
+    </form>
+</body>
+</html>

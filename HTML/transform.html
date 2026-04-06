@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        div{
+            height:100px;
+            width:100px;
+            background-color:tomato;
+       }
+       div:hover{
+            /*Transform(change)*/
+            transform:translateX(20px);
+            transform:translateY(20px);
+            transform:translate(20px,20px);/*transform: translate(x, y);*/
+            transform:scaleX(2);
+            transform:scaleY(2);
+            transform:scale(2,2);/*transform: scale(x, y);*/
+            transform:skewX(45deg);
+            transform:skewY(45deg);
+            transform:skew(45deg,45deg);/*transform: skew(x-angle, y-angle);*/
+            transform:rotateX(45deg);
+            transform:rotateY(45deg);
+            transform:rotate(45deg);/*transform: rotate(angle);*/
+            transform:matrix(1, 0, 0, 1, 50, 100)/*transform: matrix(scaleX, skewX, skewY,scaleY, translateX, translateY);*/
+       }
+       .div1{
+        width: 100px;
+        height: 50px;
+        background-color:brown;
+        transition-property: all;
+        transition-duration: 0.8s;
+        transition-timing-function: linear;
+        transition-delay: 0.2s;
+       }
+       .div1:hover{
+        background-color: gold;
+        width:400px;
+        border-radius:50px;
+       }
+    </style>
+</head>
+<body>
+    <div></div><br><br><br>
+    <div class="div1">
+        <!--transition-timing-function:linear ease ease-in ease-out ease-in-out cubic-bezier(custom curve)-->
+    </div>
+</html>
