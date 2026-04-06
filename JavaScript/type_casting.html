@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type-casting</title>
+</head>
+<body>
+    <h1>Type-casting:convert one data type to another data type</h1>
+
+
+    <script>
+        let a=10;  //number
+        let b=String(a);  //string
+        console.log(b);  //10
+        console.log(typeof b);  //string
+
+        let c="20";  //string
+        let d=Number(c);  //number
+        console.log(d);  //20
+        console.log(typeof d);  //number
+
+        let e=true;  //boolean
+        let f=String(e);  //string
+        console.log(f);  //true
+        console.log(typeof f);  //string
+
+        let g=false;  //boolean
+        let h=Number(g);  //number
+        console.log(h);  //0
+        console.log(typeof h);  //number
+
+        let z=1000000;  //number
+        let y=Boolean(z);  //boolean
+        console.log(y);  //true
+        console.log(typeof y);  //boolean
+
+        let x=93822173;  //number
+        let w=BigInt(x);  //bigint
+        console.log(w);  //93822173n
+        
+    </script>
+</body>
+</html>

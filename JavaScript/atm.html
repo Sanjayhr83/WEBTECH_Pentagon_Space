@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+</head>
+<body>
+    <h1>
+        ...WELCOME TO ATM MACHINE...
+    </h1>
+    
+<!-- const readline = require("readline-sync");
+
+while (true) {
+    let c_pin = 1234;
+    let balance = 5000;
+
+    console.log("...welcome to ATM...");
+    console.log("insert atm card");
+    console.log("choice 1.insert successfully\n2.insert card properly");
+
+    let choice = readline.question("enter your choice : ");
+
+    if (choice === "1") {
+        console.log("insert successfully");
+
+        let p = parseInt(readline.question("enter your pin : "));
+
+        if (p === c_pin) {
+            console.log("your pin is correct");
+            console.log("select language\n1.English\n2.kannada\n3.hindi");
+
+            let lang = readline.question("enter your choice: ");
+
+            if (lang === "1") {
+                console.log("select english");
+                console.log("select\n1.balance querying\n2.withdraw cash");
+
+                let b = readline.question("enter your choice: ");
+
+                if (b === "1") {
+                    setTimeout(() => {
+                        console.log("your balance is", balance);
+                        console.log("thank you for using ATM");
+                    }, 3000);
+                } 
+                else if (b === "2") {
+                    let w = parseInt(readline.question("enter your withdraw cash : "));
+
+                    setTimeout(() => {
+                        console.log("remaining balance:", balance - w);
+                        console.log("thank you for using ATM");
+                    }, 3000);
+                } 
+                else {
+                    console.log("please enter correct choice");
+                    break;
+                }
+            } 
+            else {
+                console.log("please enter correct choice");
+                break;
+            }
+        } 
+        else {
+            console.log("please enter correct choice");
+            break;
+        }
+    } 
+    else if (choice === "2") {
+        console.log("please take return your card and insert properly");
+        break;
+    } 
+    else {
+        console.log("please enter correct choice");
+    }
+} -->
+
+    <script>
+        let balance=10000;
+        let cpin=1234;
+        alert("...WELCOME TO ATM MACHINE...")
+        alert("Choice: \n1.insert successfully\n2.insert card properly")
+       let choice=prompt("Enter your choice : ")
+       if (choice=="1")
+       {
+        let pin=Number(prompt("Enter the PIN : "))
+        if (pin==cpin)
+       {
+        alert("select language\n1.English\n2.kannada\n3.hindi")
+        let lang=prompt("Enter the language : ")
+        if (lang=="1")
+       {
+        alert("You select English")
+        alert("select\n1.balance querying\n2.withdraw cash")
+        let b=prompt("Enter your choice : ")
+        if (b=="1")
+       {
+        alert(`Your balance ${balance}`);
+        alert("thank you for using ATM")
+       }
+       else if (b=="2")
+       {
+        let withdraw_amount=Number(prompt("Enter the withdr_amount"))
+        alert("processing...")
+        alert(`Your updated balance is ${balance-withdraw_amount}`)
+        alert("thank you for using ATM")
+       }
+       else{
+        alert("please enter correct choice")
+       }
+       }
+       else{
+        alert("please enter correct choice")
+       }
+       }
+       else if (choice=="2")
+       {
+        alert("please take return your card and insert properly")
+       }
+       }
+       else
+       {
+        alert("please enter correct choice")
+       }
+    </script>
+</body>
+</html>

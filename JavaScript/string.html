@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>string</h1>
+        <p>In JavaScript, strings are used to represent text. They can be created using single quotes (' '), double quotes (" "), or backticks (` `).</p>
+        <p>Example of creating strings:</p>
+        <pre><code>var str="hello"; //using double quotes</code></pre>
+        <pre><code>var str2='hello'; //using single quotes</code></pre>
+        <pre><code>var str3=`hello`; //using backticks (template literals)</code></pre>
+        <pre><code>var str4=`hello
+        hello 
+                hello`;  //template string</code></pre>
+        <p>Template literals (backticks) allow for multi-line strings and string interpolation. You can embed expressions inside a template literal using the ${expression} syntax.</p>
+        <pre><code>let a="Rahul";
+        console.log(`${a} is a Web Technology Trainer`); //string interpolation</code></pre>
+            <pre><code>let a ="Ahishek";
+            console.log(`${a} is my friend`);</code></pre>
+            <pre><code>let a="Rahul";
+            let b="Ahishek";
+            console.log(`${a} and ${b} are friends`);</code></pre>
+            </code></pre>
+            <h1>string Methods</h1>
+        <pre><code>
+        let a="Rahul";
+        console.log(`${a} is a Web Technology Trainer`); //interpetation string
+        
+        let b="   Ahishek  ";
+        console.log(b.length);  //length of the string
+        console.log(a.toUpperCase());   //convert to uppercase
+        console.log(b.toLowerCase());   //convert to lowercase
+        console.log(b.toLocaleLowerCase()); //convert to lowercase based on the host's current locale
+        console.log(b.toLocaleUpperCase()); //convert to uppercase based on the host's current locale
+        console.log(b.charAt(3));   //get the character at index 3
+        console.log(b.charCodeAt(3));   //get the Unicode value of the character at index 3
+        console.log(b.indexOf("s"));    //get the index of the first occurrence of "s"
+        console.log(b.lastIndexOf("s"));    //get the index of the last occurrence of "s"
+        console.log(b.includes("s"));   //check if the string includes "s"
+        console.log(b.startsWith("A"));   //check if the string starts with "A"
+        console.log(b.endsWith("k"));   //check if the string ends with "k"
+        console.log(b.replace("s","S"));    //replace the first occurrence of "s" with "S"
+        console.log(a.concat(b));   //concatenate two strings
+        console.log(b.slice(2,5));  //get a substring from index 2 to index 5 (excluding index 5)
+        console.log(b.substring(2,5));  //get a substring from index 2 to index 5 (excluding index 5)
+        console.log(b.substr(2,3));     //get a substring from index 2 with length 3
+        console.log(b.trimStart());     //remove whitespace from the start of the string
+        console.log(b.trimEnd());   //remove whitespace from the end of the string
+        console.log(b.trim());  //remove whitespace from both ends of the string
+        console.log(b.trim().length);   //remove whitespace from both ends of the string and get the length of the resulting string
+        console.log(a.repeat(5));   //repeat the string 5 times
+        console.log(a.split("")); //split the string into an array of characters
+        console.log(a.split(" ")); //split the string into an array of words   
+            </code></pre>
+    <script>
+        var str="hello";
+        var str2='hello';
+        var str3=`hello`;
+        console.log(str);
+        console.log(str2);
+        console.log(str3);
+
+        var str4=`hello
+        hello 
+                hello`;  //template string
+        console.log(str4);
+        let a="Rahul";
+        console.log(`${a} is a Web Technology Trainer`); //interpetation string
+        
+        let b="   Ahishek  ";
+        console.log(b.length);  //length of the string
+        console.log(a.toUpperCase());   //convert to uppercase
+        console.log(b.toLowerCase());   //convert to lowercase
+        console.log(b.toLocaleLowerCase()); //convert to lowercase based on the host's current locale
+        console.log(b.toLocaleUpperCase()); //convert to uppercase based on the host's current locale
+        console.log(b.charAt(3));   //get the character at index 3
+        console.log(b.charCodeAt(3));   //get the Unicode value of the character at index 3
+        console.log(b.indexOf("s"));    //get the index of the first occurrence of "s"
+        console.log(b.lastIndexOf("s"));    //get the index of the last occurrence of "s"
+        console.log(b.includes("s"));   //check if the string includes "s"
+        console.log(b.startsWith("A"));   //check if the string starts with "A"
+        console.log(b.endsWith("k"));   //check if the string ends with "k"
+        console.log(b.replace("s","S"));    //replace the first occurrence of "s" with "S"
+        console.log(a.concat(b));   //concatenate two strings
+        console.log(b.slice(2,5));  //get a substring from index 2 to index 5 (excluding index 5)
+        console.log(b.substring(2,5));  //get a substring from index 2 to index 5 (excluding index 5)
+        console.log(b.substr(2,3));     //get a substring from index 2 with length 3
+        console.log(b.trimStart());     //remove whitespace from the start of the string
+        console.log(b.trimEnd());   //remove whitespace from the end of the string
+        console.log(b.trim());  //remove whitespace from both ends of the string
+        console.log(b.trim().length);   //remove whitespace from both ends of the string and get the length of the resulting string
+        console.log(a.repeat(5));   //repeat the string 5 times
+        console.log(a.split("")); //split the string into an array of characters
+        console.log(a.split(" ")); //split the string into an array of words    
+    </script>
+</body>
+</html>

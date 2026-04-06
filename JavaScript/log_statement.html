@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log statement</title>
+</head>
+<body>
+    <h1>log statement: used to print the output in the console</h1>
+    <script>
+        console.log("Hello, World!");
+        console.log(10+20);
+        console.log("The sum of 10 and 20 is: " + (10+20));
+        let a=10;
+        let b=20;
+        console.log(`The sum of ${a} and ${b} is: ${a+b}`);
+        console.log(typeof a);
+        console.log(typeof b);
+
+        console.log(1+"1")  //11
+        console.log(1-"1")  //0
+        console.log("A"+5); //A5
+        console.log("A"-5); //NaN(Not a Number is not a valid number)
+        console.log(true+true); //2
+        console.log(true+false); //1
+        console.log(false+false); //0
+        console.log(true+"true"); //truetrue
+        console.log(false+"false"); //falsefalse
+        console.log(true-"true"); //NaN
+        console.log(true+4+1); //ReferenceError: true is not defined
+        console.log(4+1+true); //6
+        console.log(6>3<2); //true
+        console.log(6>3>2); //false
+            
+    </script>
+</body>
+</html>

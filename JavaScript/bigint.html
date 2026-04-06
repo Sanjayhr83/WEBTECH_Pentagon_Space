@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BigInt</h1>
+    <p>BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 2^53 - 1, which is the largest number that can be safely represented with the Number type. BigInt can be created by appending 'n' to the end of an integer literal or by using the BigInt() constructor.</p>
+    <p>Example of creating a BigInt:</p>
+    <pre><code>const bigInt1 = 123456789012345678901234567890n; // Using 'n' suffix
+const bigInt2 = BigInt("123456789012345678901234567890"); // Using BigInt constructor
+</code></pre>
+    <p>BigInt supports various arithmetic operations such as addition, subtraction, multiplication, and division. However, it does not support floating-point numbers or the Math object methods.</p>
+    <p>Example of arithmetic operations with BigInt:</p>
+    <pre><code>const a = 9007199254740991n; // Maximum safe integer in JavaScript
+        var a=1n;   // in variables first we can't assign zero or negative value to BigInt
+        var b=BigInt("0123456789012345678901234567890");//In double cots we can assign any value,-negative,zero  to BigInt
+        var c=BigInt(123456789012345678901234567890);
+        </code></pre>
+
+
+        <script>
+            var a=1n;   // in variables first we can't assign zero or negative value to BigInt
+            var b=BigInt("0123456789012345678901234567890");//
+            var c=BigInt(123456789012345678901234567890);
+             console.log(a);
+             console.log(b);
+             console.log(c);
+             console.log(typeof a);
+             console.log(typeof b);
+             console.log(typeof c);
+        </script>
+</body>
+</html>

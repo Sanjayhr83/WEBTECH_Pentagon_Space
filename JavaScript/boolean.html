@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Boolean</h1>
+    <p>true(1)</p>
+    <p>false(0)</p>
+    <p>
+        Explicit conversion to boolean:
+        <br>true values: non-empty string, non-zero number, object, array, function,1,-1,Infinity,-Infinity,"hello"
+        <br>false values: empty string"", zero, null, undefined, NaN
+    </p>
+
+    <script>
+        var bool1=true;
+        var bool2=false;
+        console.log(bool1);
+        console.log(bool2);
+        console.log(typeof bool1);
+        console.log(typeof bool2);
+
+        var bool3=Boolean(1); //true
+        var bool4=Boolean(0); //false
+        var bool5=Boolean("hello"); //true
+        var bool6=Boolean(""); //false
+        console.log(bool3);
+        console.log(bool4);
+        console.log(bool5);
+        console.log(bool6);
+
+        console.log(Boolean(null)); //false
+        console.log(Boolean(undefined)); //false
+        console.log(Boolean(NaN)); //false
+        console.log(Boolean("")); //false
+        console.log(Boolean(0)); //false
+        console.log(Boolean("hello")); //true
+        console.log(Boolean(1)); //true
+        console.log(Boolean(-1)); //true
+        console.log(Boolean(Infinity)); //true
+        console.log(Boolean(-Infinity)); //true
+        
+    </script>
+</body>
+</html>

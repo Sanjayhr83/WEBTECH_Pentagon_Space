@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <h1>Hoisting: utilizing the variable before initialization</h1>
+    <h3>Temporal Dead Zone (TDZ): the time between the start of the block and the initialization of the variable where it cannot be accessed</h3>
+
+    <script>
+        console.log(a);  //undefined
+        var a=10;
+        console.log(a);  //10
+
+        //Temporal Dead Zone (TDZ): the time between the start of the block and the initialization of the variable where it cannot be accessed
+        console.log(b);  //ReferenceError: Cannot access 'b' before initialization
+        let b=20;
+        console.log(b);  //20
+
+        console.log(c);  //ReferenceError: Cannot access 'c' before initialization
+        const c=30;
+        console.log(c);  //30
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operators in JavaScript</h1>
+    <h2>Arithmetic Operators</h2>
+    <ul>
+        <li><strong>+</strong> Addition</li>
+        <li><strong>-</strong> Subtraction</li>
+        <li><strong>*</strong> Multiplication</li>
+        <li><strong>/</strong> Division</li>
+        <li><strong>%</strong> Modulus (Remainder)</li>
+        <li><strong>++</strong> Increment</li>
+        <li><strong>--</strong> Decrement</li>
+    </ul>
+    <h2>Assignment Operators</h2>
+    <ul>
+        <li><strong>=</strong> Assignment</li>
+        <li><strong>+=</strong> Addition Assignment</li>
+        <li><strong>-=</strong> Subtraction Assignment</li>
+        <li><strong>*=</strong> Multiplication Assignment</li>
+        <li><strong>/=</strong> Division Assignment</li>
+        <li><strong>%=</strong> Modulus Assignment</li>
+    </ul>
+    <h2>Comparison Operators</h2>
+    <ul>
+        <li><strong>==</strong> Equal to</li>
+        <li><strong>===</strong> Strict equal to</li>
+        <li><strong>!=</strong> Not equal to</li>
+        <li><strong>!==</strong> Strict not equal to</li>
+        <li><strong>&gt;</strong> Greater than</li>
+        <li><strong>&lt;</strong> Less than</li>
+        <li><strong>&gt;=</strong> Greater than or equal to</li>
+        <li><strong>&lt;=</strong> Less than or equal to</li>
+    </ul>
+    <h2>Logical Operators</h2>
+    <ul>
+        <li><strong>&amp;&amp;</strong> Logical AND</li>
+        <li><strong>||</strong> Logical OR</li>
+        <li><strong>!</strong> Logical NOT</li>
+    </ul>
+    <h2>Bitwise Operators</h2>
+    <ul>
+        <li><strong>&amp;</strong> Bitwise AND</li>
+        <li><strong>|</strong> Bitwise OR</li>
+        <li><strong>^</strong> Bitwise XOR</li>
+        <li><strong>~</strong> Bitwise NOT</li>
+        <li><strong>&lt;&lt;</strong> Left shift</li>
+        <li><strong>&gt;&gt;</strong> Right shift</li>
+        <li><strong>&gt;&gt;&gt;</strong> Unsigned right shift</li>
+    </ul>
+    <h2>Other Operators</h2>
+    <ul>
+        <li><strong>typeof</strong> Returns the type of a variable</li>
+        <li><strong>instanceof</strong> Checks if an object is an instance of a specific class</li>
+        <li><strong>in</strong> Checks if a property exists in an object</li>
+        <li><strong>delete</strong> Deletes a property from an object</li>
+        <li><strong>void</strong> Evaluates an expression and returns undefined</li>
+        <li><strong>?:</strong> Ternary operator (conditional operator)</li>
+    </ul>
+
+
+    <script>
+        // Example usage of some operators
+        let a = 10;
+        let b = 5;
+
+        console.log("Addition:", a + b); // 15
+        console.log("Subtraction:", a - b); // 5
+        console.log("Multiplication:", a * b); // 50
+        console.log("Division:", a / b); // 2
+        console.log("Modulus:", a % b); // 0
+
+        let c = 20;
+        c += 5; // c is now 25
+        console.log("Addition Assignment:", c); // 25
+
+        console.log("Equal to:", a == b); // false
+        console.log("Strict equal to:", a === b); // false
+        console.log("Not equal to:", a != b); // true
+        console.log("Greater than:", a > b); // true
+
+        let isTrue = true;
+        let isFalse = false;
+        console.log("Logical AND:", isTrue && isFalse); // false
+        console.log("Logical OR:", isTrue || isFalse); // true
+        console.log("Logical NOT:", !isTrue); // false
+
+        let x = 5; // In binary: 0101
+        let y = 3; // In binary: 0011
+        console.log("Bitwise AND:", x & y); // 1 (0001)
+        console.log("Bitwise OR:", x | y); // 7 (0111)
+        console.log("Bitwise XOR:", x ^ y); // 6 (0110)
+    </script>
+</body>
+</html>

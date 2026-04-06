@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button (Calculator)</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button onclick="add()">ADDITION</button><BR></BR>
+    <button onclick="sub()">SUBTITUTION</button><br><br>
+    <button onclick="mul()">MULTIPLICATION</button>
+    <script>
+        function add()
+        {
+            let a = Number(prompt("ENTER A: "));
+            let b = Number(prompt("ENTER B: "));
+            console.log(a+b);
+        }
+        function sub()
+        {
+           let a = Number(prompt("ENTER A: "));
+           let b = Number(prompt("ENTER B: "));
+           console.log(a-b); 
+        }
+        function mul()
+        {
+            let a=Number(prompt("enter A: "))
+            let b=Number(prompt("enter B: "))
+            window.alert(a*b);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <dl>
+        <dt><h3>Function : </h3></dt>
+        <dd>Functions are blocks of code designed to perform a particular task when called.</dd>
+    </dl>
+
+    <h3>Types of Functions : </h3>
+    <ol>
+        <li>Anonymous Functions</li>
+        <li>Named Functions</li>
+        <li>Functional Expressions</li>
+        <li>First-Class Functions</li>
+        <li>IIF(Immediately Invoked Function)</li>
+        <li>Arrow Functions</li>
+        <li>Nested Functions</li>
+        <li>Higher-Order Functions</li>
+        <li>Call-back Functions</li>
+        <li>Generator Functions</li>
+    </ol>
+
+    <dl>
+        <dt><h3>Anonymous Functions:</h3></dt>
+        <dd>Functions without a name, often used for short, one-time operations.We can't execute them without assigning them to a variable.</dd>
+        <pre>
+            <code>
+            // Anonymous function example
+            we can not directly execute this because it does not have a name, but we can assign it to a variable and then execute it.
+            function ()
+            {
+                console.log("This is an anonymous function.");
+            }
+            </code>
+        </pre>
+    </dl>
+    <dl>
+        <dt><h3>Named Functions:</h3></dt>
+        <dd>Functions that have a name and can be called by that name.</dd>
+        <pre>
+            <code>
+            // Named function example
+            function namedFunction() {
+                console.log("This is a named function.");
+            }
+            namedFunction(); // Output: This is a named function.
+            </code>
+        </pre>
+    </dl>
+    <dl>
+        <dt><h3>Functional Expressions:</h3></dt>
+        <dd>Functions that are assigned to variables or passed as arguments to other functions.</dd>
+        <pre>
+            <code>
+            // Functional expression example
+            let x = function exp ()
+            {
+                console.log("This is a functional expression.");
+            }
+            x(); // Output: This is a functional expression.
+
+            let add = function(a, b) {
+            return a + b;
+            };
+            console.log(add(2, 3)); // Output: 5
+            </code>
+        </pre>
+
+    </dl>
+    <dl>
+        <dt><h3>First-Class Functions:</h3></dt>
+        <dd>Functions that can be treated as first-class citizens, meaning they can be assigned to variables, passed as arguments, and returned from other functions.</dd>
+        <pre>
+            <code>
+            // First-Class function example
+            function firstClassFunction() {
+                console.log("This is a first-class function.");
+            }
+            firstClassFunction(); // Output: This is a first-class function.
+            </code>
+        </pre>
+    </dl>
+    <dl>
+        <dt><h3>IIF(Immediately Invoked Function):</h3></dt>
+        <dd>Functions that are defined and immediately invoked, often used to create a new scope.</dd>
+        <pre>
+            <code>
+            // IIF(Immediately Invoked Function) example
+            (function ()
+            {
+                console.log("This is an IIF(immediate invoked function) function.");
+            })
+            (); // Output: This is an IIF(immediate invoked function) function.
+            </code>
+        </pre>
+    </dl>
+
+
+    <script>
+        //Example of a function
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+        console.log(greet("Alice")); // Output: Hello, Alice!
+
+        //Anonymous function example
+        // function ()
+        // {
+        //     console.log("This is an anonymous function.");
+        // }
+
+        //Named function example
+        function namedFunction() {
+            console.log("This is a named function.");
+        }
+        namedFunction();// Output: This is a named function.
+
+        //Functional expression example
+        let x = function exp ()
+        {
+            console.log("This is a functional expression.");
+        }
+        x(); // Output: This is a functional expression.
+
+        //First-Class function example
+        function firstClassFunction() {
+            console.log("This is a first-class function.");
+        }
+        firstClassFunction(); // Output: This is a first-class function.
+
+        //IIF(Immediately Invoked Function) example
+        (function ()
+        {
+            console.log("This is an IIF(immediate invoked function) function.");
+        })
+        (); // Output: This is an IIF(immediate invoked function) function.
+    </script>
+</body>
+</html>

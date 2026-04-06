@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reverse the String</h1>
+    <script>
+        //Reverse the string
+        let a="ABCDEFGH";
+        console.log(a);
+        let b=a.split("").reverse().join("");
+        console.log(b);
+
+
+        //Reverse the string using functions
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+        const inputString = "Hello, World!";
+        const reversedString = reverseString(inputString);
+        console.log(reversedString); // Output: !dlroW ,olleH
+
+        const c="racecar";
+        const d=c.split("").reverse().join("");
+        if (c==d)
+        {
+            console.log(`${c} is Palindrome`);
+        }
+        else
+        {
+            console.log(`${c} is a Not Palindrome`);
+        }
+    </script>
+</html>

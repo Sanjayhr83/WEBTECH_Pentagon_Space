@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conditional Statements in JavaScript</h1>
+    <h2>if Statement</h2>
+    <p>The <strong>if</strong> statement executes a block of code if a
+specified condition is true.</p>
+    <pre><code>if (condition) {
+    // code to be executed if condition is true
+}</code></pre>
+    <h2>if...else Statement</h2>
+    <p>The <strong>if...else</strong> statement executes one block of code if a
+specified condition is true, and another block of code if the condition is false.</p>
+    <pre><code>if (condition) {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
+}</code></pre>
+    <h2>else if Statement</h2>
+    <p>The <strong>else if</strong> statement specifies a new condition to test, if the first condition is false.</p>
+    <pre><code>if (condition1) {
+    // code to be executed if condition1 is true
+} else if (condition2) {
+    // code to be executed if condition2 is true
+} else {
+    // code to be executed if both condition1 and condition2 are false
+}</code></pre>
+    <h2>switch Statement</h2>
+    <p>The <strong>switch</strong> statement evaluates an expression and executes code based on the matching case.</p>
+    <pre><code>switch (expression) {
+    case value1:
+        // code to be executed if expression === value1
+        break;
+    case value2:
+        // code to be executed if expression === value2
+        break;
+    default:
+        // code to be executed if expression doesn't match any case
+}</code></pre>
+    <h2>Ternary Operator</h2>
+    <p>The <strong>ternary operator</strong> is a shorthand way to write an if...else statement.</p>
+    <pre><code>condition ? value1 : value2</code></pre>
+    <h2>Summary</h2>
+    <p>Conditional statements in JavaScript allow you to execute different blocks of code based on certain conditions.</p>
+
+<script>
+    let age=23;
+    if (age <18)
+{
+    console.log("You are aminor")
+}
+else if (age >=18 && age <60)
+{
+    console.log("You are an adult")
+}
+else if (age >=60 && age <100)
+{
+    console.log("You are a senior citizen")
+}
+else
+{
+    console.log("Invalid age")
+}
+
+let day = "Monday";
+switch (day)
+{
+    case "Monday":
+        console.log("Today is Monday");
+        break;
+    case "Tuesday":
+        console.log("Today is Tuesday");
+        break;
+    case "Wednesday":
+        console.log("Today is Wednesday");
+        break;
+    case "Thursday":
+        console.log("Today is Thursday");
+        break;
+    case "Friday":
+        console.log("Today is Friday");
+        break;
+    case "Saturday":
+        console.log("Today is Saturday");
+        break;
+    case "Sunday":
+        console.log("Today is Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+
+let trinername=prompt("Enter your trainer's name:");
+switch (trinername)
+{
+    case "rahul":console.log("Web Development Trainer");
+    break;
+    case "shashank":console.log("Python Trainer");
+    break;
+    case "sharath":console.log("Java Trainer");
+    break;
+    case "rakshith":console.log("Mysql Trainer");
+    break;
+    default:console.log("Invalid trainer name");
+}
+</script>
+</body>
+</html>
