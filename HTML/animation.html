@@ -26,14 +26,16 @@
         #div2{
         height: 200px;
         width: 200px;
-        position: relative;
-        background-color: goldenrod;
-        animation-name: colorchange;
-        animation-duration: 5s;
+        position: relative; /*to move the div from its original position*/
+        background-color: goldenrod;  /*initial color of the div*/
+        animation-name: colorchange; /*name of the animation*/
+        animation-duration: 5s;   /*1s,2s,3s,4s,5s,6s,7s,8s,9s,10s*/
         animation-timing-function: ease;/*linear,ease,ease-in,ease-out,ease-in-out*/
         animation-delay: 0.3s;
         animation-iteration-count: infinite;/*1,2,infinite*/
         animation-direction: normal;/*normal,reverse,alternate,alternate-reverse*/
+        animation-fill-mode: forwards;/*none,forwards,backwards,both*/
+        animation-play-state: running;/*running,paused*/
       }
 
       @keyframes colorchange {
@@ -45,15 +47,15 @@
         25% {
           top: 0;
           left: 600px;
-          background-color: aqua;
+          background-color: rgb(135, 239, 239);
         }
         50% {
-          background-color:tomato;
+          background-color:rgb(243, 130, 110);
           top: 600px;
           left: 600px;
         }
         75% {
-          background-color:azure;
+          background-color:rgb(97, 147, 254);
           top: 600px;
           left: 0px;
         }
