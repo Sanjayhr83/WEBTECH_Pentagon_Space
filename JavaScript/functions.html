@@ -100,7 +100,97 @@
         </pre>
     </dl>
 
+    <dl>
+        <dt><h3>Arrow Functions:</h3></dt>
+        <dd>Functions that use the => syntax, providing a shorter way to write function expressions.</dd>
+        <pre>
+            <code>
+            // Arrow function example
+            const arrowFunction = () => {
+                console.log("This is an arrow function.");
+            };
+            arrowFunction(); // Output: This is an arrow function.
+            </code>
+        </pre>
+    </dl>
+    <dl>
+        <dt><h3>return Functions:</h3></dt>
+        <dd>Functions that return a value when called.</dd>
+        <pre>
+            <code>
+            // return function example
+           function y()
+        {
+            return "Hello world!";
+        }
+        console.log(y()); // Output: Hello world!
+        let q= y();
+        console.log(q); // Output: Hello world!
+        console.log(y); // Output: [Function: y]
+            </code>
+        </pre>
+    </dl>
 
+    <dl>
+        <dt><h3>Higher-Order Functions:</h3></dt>
+        <dd>Functions that take other functions as arguments or return functions as their result.</dd>
+        <pre>
+            <code>
+            // Higher-Order function example
+            function higherOrderFunction(func) {
+                return function() {
+                    console.log("This is a higher-order function.");
+                    func();// Call the callback function
+                }
+            }
+            const callbackFunction = () => {
+                console.log("This is a callback function.");
+            }
+            higherOrderFunction(callbackFunction)(); // Output: This is a higher-order function.
+            // Output: This is a callback function.
+            </code>
+        </pre>
+    </dl>
+
+    <dl>
+        <dt><h3>Callback Functions:</h3></dt>
+        <dd>Functions that are passed as arguments to other functions and are executed after a certain event or condition is met.</dd>
+        <pre>
+            <code>
+            // Callback function example
+            function fetchData(callback) {
+                setTimeout(() => {
+                    const data = "Data fetched from server";
+                    callback(data); // Call the callback function with the fetched data
+                }, 2000);
+            }
+            function displayData(data) {
+                console.log(data); // Output: Data fetched from server
+            }
+            fetchData(displayData);
+            </code>
+        </pre>
+    </dl>
+
+    <dl>
+        <dt><h3>Generator Function :</h3></dt>
+        <dd>It is special type of function to generate sequence of values. <br>when ever use yeild kwyword to function that generator function.<b>yield</b> pause the execution the <b>next</b> keyword use to resume the execution where it is pause.</dd>
+        <pre>
+            <code>
+            function* generatorFunction() {
+            yield "First value";
+            yield "Second value";
+            yield "Third value";
+        }
+        const generator = generatorFunction();
+        console.log(generator.next().value); // Output: First value
+        console.log(generator.next().value); // Output: Second value
+        console.log(generator.next().value); // Output: Third value
+        console.log(generator.next().value); // Output: undefined
+    
+            </code>
+        </pre>
+    </dl>
     <script>
         //Example of a function
         function greet(name) {
@@ -139,6 +229,63 @@
             console.log("This is an IIF(immediate invoked function) function.");
         })
         (); // Output: This is an IIF(immediate invoked function) function.
+
+        //Arrow function example
+        const arrowfunction =() => {
+            console.log("This is an arrow function.");
+        }
+        arrowfunction(); // Output: This is an arrow function.
+
+        let  z = () => console.log("This is a single line arrow function.");
+        z(); // Output: This is a single line arrow function.
+        
+        //return function example
+        function y()
+        {
+            return "Hello world!";
+        }
+        console.log(y()); // Output: Hello world!
+        let q= y();
+        console.log(q); // Output: Hello world!
+        console.log(y); // Output: [Function: y]
+
+        //Higher-Order function example
+        function higherOrderFunction(func) {
+            return function() {
+                console.log("This is a higher-order function.");
+                func();// Call the callback function
+            }
+        }
+        const callbackFunction = () => {
+            console.log("This is a callback function.");
+        }
+        higherOrderFunction(callbackFunction)();// Output: This is a higher-order function.
+        // Output: This is a callback function.
+
+        //Callback function example
+        function fetchData(callback) {
+            setTimeout(() => {
+                const data = "Data fetched from server";
+                callback(data); // Call the callback function with the fetched data
+            }, 2000);
+        }
+        function displayData(data) {
+            console.log(data); // Output: Data fetched from server
+        }
+        fetchData(displayData);
+
+        //Generator function example
+        function* generatorFunction() {
+            yield "First value";
+            yield "Second value";
+            yield "Third value";
+        }
+        const generator = generatorFunction();
+        console.log(generator.next().value); // Output: First value
+        console.log(generator.next().value); // Output: Second value
+        console.log(generator.next().value); // Output: Third value
+        console.log(generator.next().value); // Output: undefined
+    
     </script>
 </body>
 </html>
