@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//     function smartDoor() {
+//     const correctPin = 1234;
+//     let attempts = 0;
+
+//     while (attempts < 3) {
+//         let userPin = Number(prompt("Enter your PIN:"));
+
+//         if (userPin === correctPin) {
+//             alert("Door opened successfully");
+//             break; // stop function after success
+//         } 
+//         else if (userPin !== correctPin) {
+//             attempts++;
+//             alert("Incorrect PIN");
+
+//             if (attempts === 3) {
+//                 alert("System is blocked");
+//             }
+//         }
+//     }
+// }
+// smartDoor();//calling the function
+
+let password=1234;
+let attempt=0;
+
+function lock() 
+{
+    let user=Number(prompt("Enter the PIN : "));
+    if (user == password)
+{
+    alert("Door Openned");
+}
+    else if (user != password && attempt <= 2)
+{
+    alert("Invalid password");
+    attempt++
+    lock()
+}
+else
+{
+    alert("system blocked");
+}
+}
+lock();
+    </script>
+</body>
+</html>
