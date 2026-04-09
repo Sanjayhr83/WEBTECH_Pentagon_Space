@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UBER-LANDING_PAGE</title>
     <style>
         nav{
             height:75px;
@@ -40,10 +40,10 @@
                 <img src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy85NTM4NTEyZC1mZGUxLTRmNzMtYmQ1MS05Y2VmZjRlMjU0ZjEucG5n" alt="" height="330px" width="280px">
             </div>
             <div style="margin-left: 70px;margin-bottom:15px;">
-                <input type="text" placeholder="Enter KM">
+                <input id="kilometer1" type="text" placeholder="Enter KM">
             </div>
             <div style="margin-top:2px;">
-                <button style="background-color: black; color:#ffff; margin-left: 60px; width:190px; border-radius: 20px;cursor:pointer;">Book now</button>
+                <button onclick="calculate('kilometer1')" style="background-color: black; color:#ffff; margin-left: 60px; width:190px; border-radius: 20px;cursor:pointer;">Book now</button>
             </div>
         </div>
         <div id="child2">
@@ -51,10 +51,10 @@
                 <img src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9mYzEwMWZmOC04MWExLTQ2YzMtOTk1YS02N2I0YmJkMmYyYmYuanBn" alt="" height="300px" width="290px">
             </div>
             <div style="margin-left: 70px;margin-bottom:15px;">
-                <input type="text" placeholder="Enter KM" >
+                <input id="kilometer2" type="text" placeholder="Enter KM" >
             </div>
             <div style="margin-top:2px;">
-                <button style="background-color: black; color:#ffff; margin-left: 60px; width:190px; border-radius: 20px;cursor:pointer;">Book now</button>
+                <button onclick="calculate('kilometer2')" style="background-color: black; color:#ffff; margin-left: 60px; width:190px; border-radius: 20px;cursor:pointer;">Book now</button>
             </div>
         </div>
         <div id="child3">
@@ -62,12 +62,21 @@
                 <img src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy8zMDUxZTYwMi0xMGJiLTRlNjUtYjEyMi1lMzk0ZDgwYTljNDcucG5n" alt="" height="330px" width="290px">
             </div>
             <div style="margin-left: 70px; margin-bottom: 15px;">
-                <input type="text" placeholder="Enter KM">
+                <input id="kilometer3" type="text" placeholder="Enter KM">
             </div>
             <div style="margin-top:2px;">
-                <button style="background-color: black; color:#ffff; margin-left: 60px; width:190px; border-radius: 20px; cursor:pointer;">Book now</button>
+                <button onclick="calculate('kilometer3')" style="background-color: black; color:#ffff; margin-left: 60px; width:190px; border-radius: 20px;cursor:pointer;">Book now</button>
             </div>
         </div>
     </div>
+
+
+    <script>
+        function calculate (id)
+        {
+            let data =document.getElementById(id).value;
+            alert(`TOTAL AMOUNT FOR YOURS LOCATION IS ${data*10}`);
+        }
+    </script>
 </body>
 </html>
