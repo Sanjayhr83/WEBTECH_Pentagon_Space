@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in js</title>
+</head>
+
+<body>
+    <h1>Scope defines where a variable is accessible in your code.</h1>
+    <h2>Types of Scope in JavaScript</h2>
+    <ol>
+        <li>Global scope</li>
+        <li>Function/local scope</li>
+        <li>block scope</li>
+    </ol>
+    <h1>1.Global Scope : </h1>
+    <p>A variable declared outside all functions.</p>
+    <pre>
+        <code>
+            let name = "Sanjay";
+
+            function greet() {
+            console.log(name);
+            }
+
+            greet();
+        </code>
+    </pre>
+    <h1>Function/local scope : </h1>
+    <p>Variables declared inside a function.</p>
+    <pre>
+        <code>
+            function test() {
+            let x = 10;
+            console.log(x);
+            }
+
+            test();
+            console.log(x); // ❌ Error
+        </code>
+        👉 x is only available inside the function
+    </pre>
+    <h1>Block Scope { } : </h1>
+    <p>Variables declared with let or const inside {}.</p>
+    <pre>
+        <code>
+            {
+            let a = 5;
+            console.log(a); // works
+            }
+
+            console.log(a); // ❌ Error
+        </code>
+        ✔ Only accessible inside the block
+        <code>
+            {
+            var x = 10;
+            }
+            console.log(x); // ✅ works
+        </code>
+
+    </pre>
+    👉 var is NOT block scoped
+
+    <h4>Summary</h4>
+    <pre><b>
+        | Scope  | Accessible Where |
+        | ------ | ---------------- |
+        | Global | Everywhere       |
+        | Local  | Inside function  |
+        | Block  | Inside `{}`      |
+
+    </b></pre>
+
+
+
+
+
+
+    <script>
+        // Global scope
+        var a=100;
+        let b=200;
+        const c= 300;
+        function Global ()
+        {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        Global();   //calling function
+
+        // Functiona or Local scope
+        function local() {
+            var x = 120;
+            let y = 220;
+            const z = 320;
+            console.log(x);
+            console.log(y);
+            console.log(z);
+        }
+        local();
+        console.log(x);  // ❌ Error
+        console.log(y);  // ❌ Error
+        console.log(z);  // ❌ Error
+
+        // Block scope
+        {
+            var i = 444;
+            let j = 445;
+            const k = 446;
+            console.log(i);
+            console.log(j); //445(✔ Only accessible inside the block)
+            console.log(k); //446(✔ Only accessible inside the block)
+        }
+        console.log(i);
+        console.log(j); // ❌ Error
+        console.log(k); // ❌ Error
+    </script>
+</body>
+
+</html>
