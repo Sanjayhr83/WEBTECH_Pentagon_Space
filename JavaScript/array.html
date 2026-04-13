@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Array and Array methods</h1>
+    <p><b>Array </b>: <br> Array is a collection of Homogeneous and Heterogeneous types of data</p>
+    <p><b>Hemogeneuos </b>: <br> Hemogeneuos means array that contains same types of data</p>
+    <p><b>Heterogeneous </b>: <br> Heterogeneous means array that contains different types of data</p>
+
+    <h2>There is 2 ways to declare Array</h2>
+    <pre><b>
+        1.literal method
+        2.Array constructor
+    </b></pre>
+
+    <p>
+        1.literal method :- let users =["Rahul","Shashank","Shaarath","Rakshith","Neharu"];
+    </p>
+    <p>
+        2.Array constructor :- let user = new Array("Rahul","Shashank","Shaarath","Rakshith","Neharu");
+    </p>
+
+
+    <h1>Methods in Array :-</h1>
+    <ol>
+        <li>push()</li>
+        <li>pop()</li>
+        <li>unshift()</li>
+        <li>shift()</li>
+        <li>splice()</li>
+    </ol>
+    <pre>
+        1.push() → Add at end
+        <code>
+            let arr = [1, 2];
+            arr.push(3);
+            console.log(arr);
+        </code>
+    </pre>
+
+    <pre>
+            2.pop() → Remove from end
+            <code>
+                let arr = [1, 2, 3];
+                arr.pop();
+                console.log(arr);
+            </code>
+        </pre>
+
+    <pre>
+            3.unshift() → Add at beginning
+            <code>
+                let arr = [2, 3];
+                arr.unshift(1);
+                console.log(arr);
+            </code>
+        </pre>
+
+    <pre>
+            4.shift() → Remove from beginning
+            <code>
+                let arr = [1, 2, 3];
+                arr.shift();
+                console.log(arr);
+            </code>
+        </pre>
+
+    <pre>
+            5.splice () ->
+                syntax : array_name.splice(start_index,deletecount,item1,item2,.......);
+                <code>
+                    let arr = [1, 2, 3, 4];
+                    let result = arr.slice(1, 3);
+                    console.log(result);
+
+                    let players = ["Virat", "MSD", "Chahal", "Rahul"];
+                    console.log(players);
+                    players.push("Bumrah", "Siraj"); //Add at end
+                    console.log(players);
+                    players.unshift("Kapil dev");   //Add at beginning
+                    console.log(players);
+                    players.pop();
+                    console.log(players);    //Remove from end
+                    players.shift()
+                    console.log(players);   //remove from beginning
+
+                    //Removing elements using splice
+                    let arr = ["Virat", "MSD", "Chahal", "Rahul"];
+                    arr.splice(1, 2);   //delete "MSD","Chahal"
+                    console.log(arr);   //['Virat', 'Rahul']
+
+                    //Replacing the elements using splice
+                    let arr1 = ["Virat", "MSD", "Chahal", "Rahul"];
+                    arr1.splice(2,1,"Ashwin");
+                    console.log(arr1);  //['Virat', 'MSD', 'Ashwin', 'Rahul']
+                </code>
+            </pre>
+
+    <pre>
+                Array Destructuring :
+                <code>
+                    let data = ["Virat",38,"Dehli","RCB","Batsman"];
+                    console.log(data);
+       
+                    let [name,age,place,team,role] = data;
+                    console.log(name);
+                    console.log(age);
+                    console.log(place);
+                    console.log(team);
+                    console.log(role);
+                </code>
+            </pre>
+
+
+    <script>
+        //literal method
+        let users = ["Rahul", "Shashank", "Shaarath", "Rakshith", "Neharu"];
+        console.log(users);
+
+        //Array constructor 
+        let user = new Array("Shalini", "Kanmani", "Priya", "Ankita");
+        console.log(user);
+
+        let players = ["Virat", "MSD", "Chahal", "Rahul"];
+        console.log(players);
+        players.push("Bumrah", "Siraj"); //Add at end
+        console.log(players);
+        players.unshift("Kapil dev");   //Add at beginning
+        console.log(players);
+        players.pop();
+        console.log(players);    //Remove from end
+        players.shift()
+        console.log(players);   //remove from beginning
+
+        //Removing elements using splice
+        let arr = ["Virat", "MSD", "Chahal", "Rahul"];
+        arr.splice(1, 2);   //delete "MSD","Chahal"
+        console.log(arr);   //['Virat', 'Rahul']
+
+        //Replacing the elements using splice
+        let arr1 = ["Virat", "MSD", "Chahal", "Rahul"];
+        arr1.splice(2, 1, "Ashwin");
+        console.log(arr1);  //['Virat', 'MSD', 'Ashwin', 'Rahul']
+
+
+       //array destructuring
+       let data = ["Virat",38,"Dehli","RCB","Batsman"];
+       console.log(data);
+       
+       let [name,age,place,team,role] = data;
+       console.log(name);
+       console.log(age);
+       console.log(place);
+       console.log(team);
+       console.log(role);
+    </script>
+</body>
+
+</html>
