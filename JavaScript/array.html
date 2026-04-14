@@ -128,6 +128,32 @@
                 </code>
             </pre>
 
+            <h1>Looping through Array :</h1>
+            <ol>
+                <li>for...in  : return the index</li>
+                <li>for...of : return the value</li>
+                <li>forEach() : return index + value</li>
+            </ol>
+            <pre>
+                <code>
+                     let fruits=["Mango","Apple","Watermelon","Graps"];
+
+                     // for....in 
+                    for (let i in fruits) {
+                    console.log(i);
+                    }
+
+                    //for...of
+                    for (let i of fruits) {
+                    console.log(i);
+                    }
+
+                    //forEach()
+                    fruits.forEach((value,index) =>{
+                    console.log(`${index} :  ${value}`);
+                    });
+                </code>
+            </pre>
 
     <script>
         //literal method
@@ -170,7 +196,24 @@
        console.log(place);
        console.log(team);
        console.log(role);
+
+    //Looping through Array
+    let fruits=["Mango","Apple","Watermelon","Graps"];
+
+    // for....in 
+    for (let i in fruits) {
+        console.log(i);
+    }
+
+    //for...of
+    for (let i of fruits) {
+        console.log(i);
+    }
+
+    //forEach()
+    fruits.forEach((value,index) =>{
+        console.log(`${index} :  ${value}`);
+    });
     </script>
 </body>
-
 </html>
