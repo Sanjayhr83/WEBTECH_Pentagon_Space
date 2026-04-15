@@ -21,7 +21,8 @@
         Ordered: Array elements are ordered based on their index.<br>
         Zero indexed: The first element is at index 0, the second at index 1, and so on.<br>
         Dynamic size: Arrays can grow or shrink as elements are added or removed.<br>
-        Heterogeneous: Arrays can store elements of different data types (numbers, strings, objects and other arrays).<br>
+        Heterogeneous: Arrays can store elements of different data types (numbers, strings, objects and other
+        arrays).<br>
     </h5>
 
     <h2>There is 2 ways to declare Array</h2>
@@ -128,13 +129,13 @@
                 </code>
             </pre>
 
-            <h1>Looping through Array :</h1>
-            <ol>
-                <li>for...in  : return the index</li>
-                <li>for...of : return the value</li>
-                <li>forEach() : return index + value</li>
-            </ol>
-            <pre>
+    <h1>Looping through Array :</h1>
+    <ol>
+        <li>for...in : return the index</li>
+        <li>for...of : return the value</li>
+        <li>forEach() : return index + value</li>
+    </ol>
+    <pre>
                 <code>
                      let fruits=["Mango","Apple","Watermelon","Graps"];
 
@@ -155,8 +156,60 @@
                 </code>
             </pre>
 
+        <h1>filter(),map(),reduce() : </h1>
+        <ol>
+            <li>filter() : filter() is a built-in Higher order function(HOF), it is remove unwanted element from an array based on condition and return new array.</li>
+            <li>map() : map() is a built-in Higher order function(HOF),it applies given functiion for each and every element and it return new array.</li>
+            <li>reduce() : reduce() is a built-in Higher order function(HOF),it takes multiple ememnts and it reduce into a single value.</li>
+        </ol>
+
+        <pre>
+            <code>
+        //filter() :-
+
+        let num = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        let result = num.filter((x) => {
+            return x > 30
+        })
+        console.log(result) //[40,50,60,70,80,90,100]
+
+        let i0 = [11, 33, 55, 67, 65, 88, 98, 321, 678987, 12434, 12345678];
+        let results = i0.filter((x) => {
+            return x > 50;
+        })
+        console.log(results);   //[55, 67, 65, 88, 98, 321, 678987, 12434, 12345678]
+
+        //map() :-
+
+        let num2 = [1, 2, 3, 4, 5];
+        let result0 = num2.map((y) => {
+            return y + 5
+        })
+        console.log(result0)    //6,7,8,9,10]
+
+        let i1 = [11, 33, 55, 67, 65, 88, 98, 321, 678987, 12434, 12345678];
+        let result2 = i1.map((y) => {
+            return y * 2;
+        })
+        console.log(result2);   //[22, 66, 110, 134, 130, 176, 196, 642, 1357974, 24868, 24691356]
+
+        //reduce() :-
+        
+        let num3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let result3 = num3.reduce((acc, value) => {
+            return acc + value
+        }, 0)    //In Addition give zero as a initial value
+        console.log(result3);   //55
+
+        let num4 = [11, 22, 33, 44, 55];
+        let result4 = num4.reduce((acc, value) => {
+            return acc * value
+        }, 1)    //In Multiplication give One or any value as a initial value
+        console.log(result4);   //19326120
+            </code>
+        </pre>
     <script>
-        //literal method
+        //     //literal method
         let users = ["Rahul", "Shashank", "Shaarath", "Rakshith", "Neharu"];
         console.log(users);
 
@@ -186,34 +239,75 @@
         console.log(arr1);  //['Virat', 'MSD', 'Ashwin', 'Rahul']
 
 
-       //array destructuring
-       let data = ["Virat",38,"Dehli","RCB","Batsman"];
-       console.log(data);
-       
-       let [name,age,place,team,role] = data;
-       console.log(name);
-       console.log(age);
-       console.log(place);
-       console.log(team);
-       console.log(role);
+        //array destructuring
+        let data = ["Virat", 38, "Dehli", "RCB", "Batsman"];
+        console.log(data);
 
-    //Looping through Array
-    let fruits=["Mango","Apple","Watermelon","Graps"];
+        let [name, age, place, team, role] = data;
+        console.log(name);
+        console.log(age);
+        console.log(place);
+        console.log(team);
+        console.log(role);
 
-    // for....in 
-    for (let i in fruits) {
-        console.log(i);
-    }
+        //Looping through Array
+        let fruits = ["Mango", "Apple", "Watermelon", "Graps"];
 
-    //for...of
-    for (let i of fruits) {
-        console.log(i);
-    }
+        // for....in 
+        for (let i in fruits) {
+            console.log(i);
+        }
 
-    //forEach()
-    fruits.forEach((value,index) =>{
-        console.log(`${index} :  ${value}`);
-    });
+        //for...of
+        for (let i of fruits) {
+            console.log(i);
+        }
+
+        //forEach()
+        fruits.forEach((value, index) => {
+            console.log(`${index} :  ${value}`);
+        });
+
+        //filter() :-
+        let num = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+        let result = num.filter((x) => {
+            return x > 30
+        })
+        console.log(result) //[40,50,60,70,80,90,100]
+
+        let i0 = [11, 33, 55, 67, 65, 88, 98, 321, 678987, 12434, 12345678];
+        let results = i0.filter((x) => {
+            return x > 50;
+        })
+        console.log(results);   //[55, 67, 65, 88, 98, 321, 678987, 12434, 12345678]
+
+        //map() :-
+        let num2 = [1, 2, 3, 4, 5];
+        let result0 = num2.map((y) => {
+            return y + 5
+        })
+        console.log(result0)    //6,7,8,9,10]
+
+        let i1 = [11, 33, 55, 67, 65, 88, 98, 321, 678987, 12434, 12345678];
+        let result2 = i1.map((y) => {
+            return y * 2;
+        })
+        console.log(result2);   //[22, 66, 110, 134, 130, 176, 196, 642, 1357974, 24868, 24691356]
+
+        //reduce() :-
+        let num3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let result3 = num3.reduce((acc, value) => {
+            return acc + value
+        }, 0)    //In Addition give zero as a initial value
+        console.log(result3);   //55
+
+        let num4 = [11, 22, 33, 44, 55];
+        let result4 = num4.reduce((acc, value) => {
+            return acc * value
+        }, 1)    //In Multiplication give One or any value as a initial value
+        console.log(result4);   //19326120
+
     </script>
 </body>
+
 </html>
