@@ -194,7 +194,7 @@
         console.log(result2);   //[22, 66, 110, 134, 130, 176, 196, 642, 1357974, 24868, 24691356]
 
         //reduce() :-
-        
+
         let num3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         let result3 = num3.reduce((acc, value) => {
             return acc + value
@@ -206,6 +206,34 @@
             return acc * value
         }, 1)    //In Multiplication give One or any value as a initial value
         console.log(result4);   //19326120
+            </code>
+        </pre>
+
+
+        <h1>Combing of filter,map,reduce</h1>
+        <pre>
+            <code>
+        //Combing of filter,map,reduce
+        let product = [18000,4000,200,4500,400,1500,6000,1400,750];
+        console.log(product);   //[18000,4000,200,4500,400,1500,6000,1400,750]
+
+        //filter
+        let filterProduct = product.filter((x) => {
+            return x>4000
+        })
+        console.log(filterProduct);  //[18000, 4500, 6000]
+        
+        //map
+        let gstTotal = filterProduct.map((x) => {
+            return x + x * 0.18
+        })
+        console.log(gstTotal);  //[21240, 5310, 7080]
+        
+        //reduce
+        let total = gstTotal.reduce((x,y) => {
+            return x+y
+        },0)
+        console.log(total);  //33630
             </code>
         </pre>
     <script>
@@ -307,6 +335,27 @@
         }, 1)    //In Multiplication give One or any value as a initial value
         console.log(result4);   //19326120
 
+        //Combing of filter,map,reduce
+        let product = [18000,4000,200,4500,400,1500,6000,1400,750];
+        console.log(product);   //[18000,4000,200,4500,400,1500,6000,1400,750]
+
+        //filter
+        let filterProduct = product.filter((x) => {
+            return x>4000
+        })
+        console.log(filterProduct);  //[18000, 4500, 6000]
+        
+        //map
+        let gstTotal = filterProduct.map((x) => {
+            return x + x * 0.18
+        })
+        console.log(gstTotal);  //[21240, 5310, 7080]
+        
+        //reduce
+        let total = gstTotal.reduce((x,y) => {
+            return x+y
+        },0)
+        console.log(total);  //33630
     </script>
 </body>
 
