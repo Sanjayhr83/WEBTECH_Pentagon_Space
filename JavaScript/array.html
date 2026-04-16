@@ -344,8 +344,8 @@
         console.log(result4);   //19326120
 
         //Combing of filter,map,reduce
-        let product = [18000,4000,200,4500,400,1500,6000,1400,750];
-        console.log(product);   //[18000,4000,200,4500,400,1500,6000,1400,750]
+        let product = [18000,4000,200,3000,4500,400,1500,6000,1400,750];
+        console.log(product);   //[18000,4000,200,3000,4500,400,1500,6000,1400,750]
 
         //filter
         let filterProduct = product.filter((x) => {
@@ -355,7 +355,7 @@
         
         //map
         let gstTotal = filterProduct.map((x) => {
-            return x + x * 0.18
+            return x + x * 0.18 //18% GST adding for filterproducts
         })
         console.log(gstTotal);  //[21240, 5310, 7080]
         
