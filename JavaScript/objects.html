@@ -34,7 +34,6 @@
         </code>
         </pre>
     </p>
-
     <p>2. object constructor : An object constructor used to create a object <u>new</u> keyword<br>
         syntax : let object_name = new Object();<br>
     <pre>
@@ -49,7 +48,7 @@
             console.table(person);  // it will print the object in table format
         </code>
         </pre>
-    </p>
+    </p><hr>
 
     <h3>Accessing Object properties :</h3>
         <p>There are two ways to access the properties of an object : </p>
@@ -89,8 +88,41 @@
                 console.log(student["srank"]);
             </code>
             </pre>
-        </p>
+        </p><hr>
 
+        <h3>Updating, adding, deleting Properties : </h3>
+        adding syntax : object_name.adding_property = value <br>
+        modifying syntax :  object_name.exiting_object_property = value <br>
+        deleting syntax : delete exiting_object_property <br>
+        <pre>
+            Example : 
+            <code>
+                let car ={
+                    brand : "KIA",
+                    model : "XUV",
+                    mileage : "18 per liter",
+                    price : "15 lakhs",
+                    headlight : "2"
+                }
+                console.log(car);
+                console.table(car);
+
+                //updating or modifying value
+                car.model = "Compact SUV";
+                console.log(car.model);
+                console.table(car);
+
+                //adding new property
+                car.color = "white";
+                console.log(car);
+                console.table(car);
+
+                //deleting one property
+                delete car.headlight;
+                console.log(car);
+                console.table(car);
+            </code>
+        </pre>
 
 
 
@@ -145,6 +177,32 @@
                 console.log(student["sage"]);
                 console.log(student["susn"]);
                 console.log(student["srank"]);
+
+        //Updating, adding, deleting Properties 
+        let car ={
+                    brand : "KIA",
+                    model : "XUV",
+                    mileage : "18 per liter",
+                    price : "15 lakhs",
+                    headlight : "2"
+                }
+                console.log(car);
+                console.table(car);
+
+                //updating or modifying value
+                car.model = "Compact SUV";
+                console.log(car.model);
+                console.table(car);
+
+                //adding new property
+                car.color = "white";
+                console.log(car);
+                console.table(car);
+
+                //deleting one property
+                delete car.headlight;
+                console.log(car);
+                console.table(car);
     </script>
 </body>
 </html>
