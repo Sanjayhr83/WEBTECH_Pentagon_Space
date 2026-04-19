@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objects in JavaScript</title>
 </head>
+
 <body>
     <h1>Objects : </h1>
     <p>object is a real world entity used to store the data in the form of key:value pairs</p>
     <span>There are two ways to create objects in JavaScript:</span>
-        <ol>
-            <li>Object Literal </li>
-            <li>Object Constructor </li>
-        </ol>
+    <ol>
+        <li>Object Literal </li>
+        <li>Object Constructor </li>
+    </ol>
     <p>1. Object Literal : An object literal is the simplest and most common way to define a JavaScript object.<br>
         syntax : let object_name = {key1 : value1, key2 : value2, key3 : value3, ...};<br>
-        <pre>
+    <pre>
         Example :
         <code>
             let product = {
@@ -48,17 +50,18 @@
             console.table(person);  // it will print the object in table format
         </code>
         </pre>
-    </p><hr>
+    </p>
+    <hr>
 
     <h3>Accessing Object properties :</h3>
-        <p>There are two ways to access the properties of an object : </p>
-            <ol>
-                <li>Dot notation</li>
-                <li>Bracket notation</li>
-            </ol>    
-        <p>1. Dot notation : It is the most common way to access the properties of an object.<br>
-            syntax : object_name.property_name;<br>
-            <pre>
+    <p>There are two ways to access the properties of an object : </p>
+    <ol>
+        <li>Dot notation</li>
+        <li>Bracket notation</li>
+    </ol>
+    <p>1. Dot notation : It is the most common way to access the properties of an object.<br>
+        syntax : object_name.property_name;<br>
+    <pre>
             Example :
             <code>
                 let user = {
@@ -71,9 +74,10 @@
                 console.log(user.area);
             </code>
             </pre>
-        <p>2. Bracket notation : It is used to access the properties of an object when the property name is not a valid identifier or when the property name is stored in a variable.<br>
-            syntax : object_name["property_name"];<br>
-            <pre>
+    <p>2. Bracket notation : It is used to access the properties of an object when the property name is not a valid
+        identifier or when the property name is stored in a variable.<br>
+        syntax : object_name["property_name"];<br>
+    <pre>
             Example :
             <code>
                 let student = {
@@ -88,13 +92,25 @@
                 console.log(student["srank"]);
             </code>
             </pre>
-        </p><hr>
+    </p>
+    <hr>
 
-        <h3>Updating, adding, deleting Properties : </h3>
-        adding syntax : object_name.adding_property = value <br>
-        modifying syntax :  object_name.exiting_object_property = value <br>
-        deleting syntax : delete exiting_object_property <br>
-        <pre>
+    <h3>Updating, adding, deleting Properties : </h3>
+    <h5>Adding : </h5>
+    Adding a new property <br>
+    <u>adding syntax</u> : object_name.adding_property = value <br>
+
+    <h5>Update or modifying :</h5>
+    Update or modifying the existing property <br>
+    <u>modifying syntax</u> : object_name.existing_object_property = value <br>
+
+    <h5>delete : </h5>
+    The delete keyword deletes both the value and the property.<br>
+    After deleting, the property is removed. Accessing it will return undefined.<br>
+    <u>deleting syntax</u> : delete existing_object_property <br>
+
+    
+    <pre>
             Example : 
             <code>
                 let car ={
@@ -132,77 +148,78 @@
     <script>
         // Creating of object using object literal
         let product = {
-                name : "Phone",
-                color : "Purple",
-                price : 21000,
-                features : {
-                    RAM : "8 + 8 GB",
-                    ROM : "128 GB",
-                    Charging : "80 W",
-                    Cable_type : "Type C"
-                }
+            name: "Phone",
+            color: "Purple",
+            price: 21000,
+            features: {
+                RAM: "8 + 8 GB",
+                ROM: "128 GB",
+                Charging: "80 W",
+                Cable_type: "Type C"
             }
-            console.log(product);
-            console.table(product);   // it will print the object in table format
+        }
+        console.log(product);
+        console.table(product);   // it will print the object in table format
 
 
         // Creating of object using object constructor
-        let person = new Object( {
-                name : "Ram",
-                age : 23,
-                area: "Kathmandu"
-            });
-            console.log(person);
-            console.table(person);  // it will print the object in table format
+        let person = new Object({
+            name: "Ram",
+            age: 23,
+            area: "Kathmandu"
+        });
+        console.log(person);
+        console.table(person);  // it will print the object in table format
 
 
         // Accessing object properties using dot notation
         let user = {
-                    name : "Shyam",
-                    age : 25,
-                    area : "Lalitpur"
-                }
-                console.log(user.name);
-                console.log(user.age);
-                console.log(user.area);
+            name: "Shyam",
+            age: 25,
+            area: "Lalitpur"
+        }
+        console.log(user.name);
+        console.log(user.age);
+        console.log(user.area);
 
         // Accessing object properties using bracket notation
         let student = {
-                    sname : "Abhi",
-                    sage :19,
-                    susn : "4EG22AI001",
-                    "srank": 2
-                }
-                console.log(student["sname"]);
-                console.log(student["sage"]);
-                console.log(student["susn"]);
-                console.log(student["srank"]);
+            sname: "Abhi",
+            sage: 19,
+            susn: "4EG22AI001",
+            "srank": 2
+        }
+        console.log(student["sname"]);
+        console.log(student["sage"]);
+        console.log(student["susn"]);
+        console.log(student["srank"]);
 
         //Updating, adding, deleting Properties 
-        let car ={
-                    brand : "KIA",
-                    model : "XUV",
-                    mileage : "18 per liter",
-                    price : "15 lakhs",
-                    headlight : "2"
-                }
-                console.log(car);
-                console.table(car);
+        let car = {
+            brand: "KIA",
+            model: "XUV",
+            mileage: "18 per liter",
+            price: "15 lakhs",
+            headlight: "2"
+        }
+        console.log(car);
+        console.table(car);
 
-                //updating or modifying value
-                car.model = "Compact SUV";
-                console.log(car.model);
-                console.table(car);
+        //updating or modifying value
+        car.model = "Compact SUV";
+        console.log(car.model);
+        console.table(car);
 
-                //adding new property
-                car.color = "white";
-                console.log(car);
-                console.table(car);
+        //adding new property
+        car.color = "white";
+        console.log(car);
+        console.table(car);
 
-                //deleting one property
-                delete car.headlight;
-                console.log(car);
-                console.table(car);
+        //deleting one property
+        delete car.headlight;
+        console.log(car);
+        console.table(car);
     </script>
 </body>
+
 </html>
