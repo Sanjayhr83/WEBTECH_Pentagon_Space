@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JavaScript</title>
+</head>
+<body>
+    <h1>Objects : </h1>
+    <p>object is a real world entity used to store the data in the form of key:value pairs</p>
+    <span>There are two ways to create objects in JavaScript:</span>
+        <ol>
+            <li>Object Literal </li>
+            <li>Object Constructor </li>
+        </ol>
+    <p>1. Object Literal : An object literal is the simplest and most common way to define a JavaScript object.<br>
+        syntax : let object_name = {key1 : value1, key2 : value2, key3 : value3, ...};<br>
+        <pre>
+        Example :
+        <code>
+            let product = {
+                name : "Phone",
+                color : "Purple",
+                price : 21000,
+                features : {
+                    RAM : "8 + 8 GB",
+                    ROM : "128 GB",
+                    Charging : "80 W",
+                    Cable type : "Type C"
+                }
+            }
+            console.log(product);
+            console.table(product);   // it will print the object in table format
+        </code>
+        </pre>
+    </p>
+
+    <p>2. object constructor : An object constructor used to create a object <u>new</u> keyword<br>
+        syntax : let object_name = new Object();<br>
+    <pre>
+        Example :
+        <code>
+            let person = new Object( {
+                name : "Ram",
+                age : 23,
+                area: "Kathmandu"
+            });
+            console.log(person);
+            console.table(person);  // it will print the object in table format
+        </code>
+        </pre>
+    </p>
+
+    <h3>Accessing Object properties :</h3>
+        <p>There are two ways to access the properties of an object : </p>
+            <ol>
+                <li>Dot notation</li>
+                <li>Bracket notation</li>
+            </ol>    
+        <p>1. Dot notation : It is the most common way to access the properties of an object.<br>
+            syntax : object_name.property_name;<br>
+            <pre>
+            Example :
+            <code>
+                let user = {
+                    name : "Shyam",
+                    age : 25,
+                    area : "Lalitpur"
+                }
+                console.log(user.name);
+                console.log(user.age);
+                console.log(user.area);
+            </code>
+            </pre>
+        <p>2. Bracket notation : It is used to access the properties of an object when the property name is not a valid identifier or when the property name is stored in a variable.<br>
+            syntax : object_name["property_name"];<br>
+            <pre>
+            Example :
+            <code>
+                let student = {
+                    sname : "Abhi",
+                    sage :19,
+                    susn : "4EG22AI001",
+                    "srank": 2
+                }
+                console.log(student["sname"]);
+                console.log(student["sage"]);
+                console.log(student["susn"]);
+                console.log(student["srank"]);
+            </code>
+            </pre>
+        </p>
+
+
+
+
+
+
+
+    <script>
+        // Creating of object using object literal
+        let product = {
+                name : "Phone",
+                color : "Purple",
+                price : 21000,
+                features : {
+                    RAM : "8 + 8 GB",
+                    ROM : "128 GB",
+                    Charging : "80 W",
+                    Cable_type : "Type C"
+                }
+            }
+            console.log(product);
+            console.table(product);   // it will print the object in table format
+
+
+        // Creating of object using object constructor
+        let person = new Object( {
+                name : "Ram",
+                age : 23,
+                area: "Kathmandu"
+            });
+            console.log(person);
+            console.table(person);  // it will print the object in table format
+
+
+        // Accessing object properties using dot notation
+        let user = {
+                    name : "Shyam",
+                    age : 25,
+                    area : "Lalitpur"
+                }
+                console.log(user.name);
+                console.log(user.age);
+                console.log(user.area);
+
+        // Accessing object properties using bracket notation
+        let student = {
+                    sname : "Abhi",
+                    sage :19,
+                    susn : "4EG22AI001",
+                    "srank": 2
+                }
+                console.log(student["sname"]);
+                console.log(student["sage"]);
+                console.log(student["susn"]);
+                console.log(student["srank"]);
+    </script>
+</body>
+</html>
