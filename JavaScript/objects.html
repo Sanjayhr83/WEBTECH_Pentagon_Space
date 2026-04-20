@@ -109,7 +109,6 @@
     After deleting, the property is removed. Accessing it will return undefined.<br>
     <u>deleting syntax</u> : delete existing_object_property <br>
 
-    
     <pre>
             Example : 
             <code>
@@ -139,10 +138,25 @@
                 console.table(car);
             </code>
         </pre>
+    <hr>
 
-
-
-
+    <h5>Object Methods :</h5>
+    accessing only keys : Object.keys(object_name) <br>
+    accessing only values : Object.values(object_name) <br>
+    accessing both keys and values : Object.entries(object_name) <br>
+    <pre>
+        <code>
+        //Object Methods
+        let user1 ={
+            name : "sanju",
+            age : 21,
+            area : "Tarikere"
+        }
+        console.log(Object.keys(user1)); // it will return an array of keys
+        console.log(Object.values(user1)); // it will return an array of values
+        console.log(Object.entries(user1)); // it will return an array of key-value pairs
+        </code>
+    </pre>
 
 
     <script>
@@ -219,6 +233,16 @@
         delete car.headlight;
         console.log(car);
         console.table(car);
+
+        //Object Methods
+        let user1 = {
+            name: "sanju",
+            age: 21,
+            area: "Tarikere"
+        }
+        console.log(Object.keys(user1)); // it will return an array of keys
+        console.log(Object.values(user1)); // it will return an array of values
+        console.log(Object.entries(user1)); // it will return an array of key-value pairs
     </script>
 </body>
 

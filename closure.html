@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+
+
+    <script>
+        function outer() {
+            count = 0;
+
+            function inner () {
+                count++;
+                console.log(count);
+            }
+            return inner;
+        }
+        let a = outer()
+        a();
+        a();
+        a(); 
+
+
+
+        function createBankAccount () {
+            let balance = 0;
+            return {
+                deposite : function (amount) {
+                    if (amount<0){
+                        alter("invalid amount");
+                    }else{
+                        balane = amount + balance;
+                        console.log(`deposite amount ${amount}, new balance ${amount}`); 
+                    }
+                },
+                withdraw : function (amount) {
+                    if (amount<0){
+                        alert("invalid withdraw")
+                    }
+                    else if (amount > balance) {
+                        alert("insufficient balance")
+                    }
+                    else {
+                        balance = balance -amount;
+                        console.log(`withdraw amount ${amount}, balance ${balance}`);
+                    }
+                }
+            }
+        }
+
+        let sanju =createBankAccount();
+        sanju.deposite(50000);
+        sanju.withdraw(25000);
+
+    </script>
+</body>
+</html>
