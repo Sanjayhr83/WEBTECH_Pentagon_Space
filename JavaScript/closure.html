@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+
+    <h1>Closure</h1>
+    A closure is when a function remembers variables from its outer scope, even after that outer function has finished
+    executing.
+
+    <pre>
+        Example
+        <code>
+            function outer() {
+            count = 0;
+
+            function inner () {
+                count++;
+                console.log(count);
+            }
+            return inner;
+        }
+        let a = outer()
+        a();
+        a();
+        a(); 
+
+
+        Example 2 :
+        function CreateBankAccount () {
+        let balance = 0;
+        return {
+        deposite : function (amount) {
+            if (amount < 0){
+                console.log("invalid deposite")
+            }else{
+                balance = amount + balance
+                console.log(`deposite amount ${amount}, balance ${amount}`)
+            }
+        },
+        withdraw : function (amount){
+            if (amount < 0){
+                console.log("inavalid withraw")
+            }else if (amount > balance){
+                console.log("enter valid amount")
+            }else{
+                balance = balance - amount
+                console.log(`withdraw amount ${amount}, new balance ${balance}`)
+            }
+          } 
+         }
+        }
+        let sanju = CreateBankAccount ()
+        sanju.deposite(50000)
+        sanju.withdraw(5000)
+
+        </code>
+    </pre>
+
+
+
+
+
+    <script>
+        function outer() {
+            count = 0;
+
+            function inner() {
+                count++;
+                console.log(count);
+            }
+            return inner;
+        }
+        let a = outer()
+        a();
+        a();
+        a();
+
+
+
+        function CreateBankAccount() {
+            let balance = 0;
+            return {
+                deposite: function (amount) {
+                    if (amount < 0) {
+                        console.log("invalid deposite")
+                    } else {
+                        balance = amount + balance
+                        console.log(`deposite amount ${amount}, balance ${amount}`)
+                    }
+                },
+                withdraw: function (amount) {
+                    if (amount < 0) {
+                        console.log("inavalid withraw")
+                    } else if (amount > balance) {
+                        console.log("enter valid amount")
+                    } else {
+                        balance = balance - amount
+                        console.log(`withdraw amount ${amount}, new balance ${balance}`)
+                    }
+                }
+            }
+        }
+        let sanju = CreateBankAccount()
+        sanju.deposite(50000)
+        sanju.withdraw(5000)
+
+    </script>
+</body>
+
+</html>
