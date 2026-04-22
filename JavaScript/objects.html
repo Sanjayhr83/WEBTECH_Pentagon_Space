@@ -156,7 +156,53 @@
         console.log(Object.values(user1)); // it will return an array of values
         console.log(Object.entries(user1)); // it will return an array of key-value pairs
         </code>
+    </pre><hr>
+
+    <h5>Object Sealing and freezing : both sealing and freexzing means protecting on object</h5> <br>
+    <strong>Sealing</strong> : when ever an object is sealed adding,removing not possible, but we can update the property. <br>
+    <pre>
+        <code>
+        let student = {
+        name: "sanju",
+        age: 20,
+        dept : "AIML"
+        }
+
+        Object.seal(student); // it will seal the object
+        //adding
+        student.gender="male";
+        console.log(student); // ❌it will not add the new property because the object is sealed
+        //deleting
+        delete student.age;
+        console.log(student); //❌ it will not delete the existing property because the object is sealed
+        //updating
+        student.age =21;
+        console.log(student); //✅ it will update the existing property because the object is sealed
+        console.log(Object.isSealed(student)); //true
+        </code>
     </pre>
+    <strong>Freezing</strong> : (Read only) when ever an object is freezed  we cannot add,remove,modify the property. <br>
+    <pre>
+        <code>
+        let student1 = {
+        name: "Ram",
+        age: 20,
+        dept : "AIML"
+        }
+        Object.freeze(student1); // it will freeze the object
+        //adding
+        student1.college = "GEC";
+        console.log(student1); // ❌it will not add the new property because the object is frozen
+        //deleting
+        delete student1.age;
+        console.log(student1); //❌ it will not delete the existing property because the object is frozen
+        //updating
+        student1.dept = "CS";
+        console.log(student1); //❌ it will not update the existing property because the object is frozen
+        console.log(Object.isFrozen(student1)); //true
+        </code>
+    </pre>
+
 
 
     <script>
@@ -243,6 +289,41 @@
         console.log(Object.keys(user1)); // it will return an array of keys
         console.log(Object.values(user1)); // it will return an array of values
         console.log(Object.entries(user1)); // it will return an array of key-value pairs
+
+        let student0 = {
+            name: "sanju",
+            age: 21,
+            dept : "AIML"
+        }
+
+        Object.seal(student0); // it will seal the object
+        //adding
+        student.gender="male";
+        console.log(student0); // ❌it will not add the new property because the object is sealed
+        //deleting
+        delete student0.age;
+        console.log(student0); //❌ it will not delete the existing property because the object is sealed
+        //updating
+        student0.name = "Sanjay";
+        console.log(student0); //✅ it will update the existing property because the object is sealed
+        console.log(Object.isSealed(student0)); //true
+
+        let student1 = {
+            name: "Ram",
+            age: 20,
+            dept : "AIML"
+        }
+        Object.freeze(student1); // it will freeze the object
+        //adding
+        student1.college = "GEC";
+        console.log(student1); // ❌it will not add the new property because the object is frozen
+        //deleting
+        delete student1.age;
+        console.log(student1); //❌ it will not delete the existing property because the object is frozen
+        //updating
+        student1.dept = "CS";
+        console.log(student1); //❌ it will not update the existing property because the object is frozen
+        console.log(Object.isFrozen(student1)); //true
     </script>
 </body>
 
