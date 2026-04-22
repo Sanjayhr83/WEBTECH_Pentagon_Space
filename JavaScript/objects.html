@@ -201,9 +201,25 @@
         console.log(student1); //❌ it will not update the existing property because the object is frozen
         console.log(Object.isFrozen(student1)); //true
         </code>
-    </pre>
+    </pre><hr>
 
-
+    <h5>Object Destructuring : </h5>
+     "Object destructuring means unpacking values from the object and storing separate variables".
+     <pre>
+        <code>
+        let student2 ={
+        name : "loki",
+        age :20,
+        dept : "CSE",
+        usn : "19"
+        }
+        let {name,age,dept,usn} = student2; //object destructuring
+        console.log(name);  //loki
+        console.log(age);   //20
+        console.log(dept);  //CSE
+        console.log(usn);   //19
+        </code>
+     </pre>
 
     <script>
         // Creating of object using object literal
@@ -324,6 +340,20 @@
         student1.dept = "CS";
         console.log(student1); //❌ it will not update the existing property because the object is frozen
         console.log(Object.isFrozen(student1)); //true
+
+        //object destructuring
+        let student2 ={
+            name : "loki",
+            age :20,
+            dept : "CSE",
+            usn : "19"
+        }
+        let {name,age,dept,usn} = student2; //object destructuring
+        console.log(name);  //loki
+        console.log(age);   //20
+        console.log(dept);  //CSE
+        console.log(usn);   //19
+
     </script>
 </body>
 
