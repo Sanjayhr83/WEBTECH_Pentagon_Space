@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Storage API</title>
 </head>
+
 <body>
     <h1>Web Storage API : </h1>
     <p>Eachh and every browser provide in-built storage to store data up to a certain limit(10 MB).</p>
@@ -14,7 +16,7 @@
         <li>localStorage (Permanent storage)</li>
         <li>sessionStorage (Temporary storage)</li>
     </ul>
-    
+
     <h3>1. localStorage</h3>
     <pre>
     //To store data <br>
@@ -24,24 +26,44 @@
     //To get data <br>
     syntax : <br>
         localStorage.getItem("key"); <br>
+
+    //To remove data <br>
+    syntax : <br>
+        localStorage.removeItem("key"); <br>
+
+    //To clear all data <br>
+    syntax : <br>
+        localStorage.clear(); <br>
     </pre>
     <pre>
         <code>
         // localstrorage :
         let name = "sanjay";
         let email = "sanjay@example.com";
+        let password = "1234";
         localStorage.setItem("name", name); //to set data in localStorage
         localStorage.setItem("email", email); //to set data in localStorage
+        localStorage.setItem("password", password); //to set data in localStorage
         
         // to get data from localStorage :
         let getName = localStorage.getItem("name");
         let getemail = localStorage.getItem("email");
+        let getpassword = localStorage.getItem("password");
         console.log(getName);
         console.log(getemail);
+        console.log(getpassword);
+        
+        // to remove data from localStorage :
+        localStorage.removeItem("email");
+
+        // to clear all data from localStorage :
+        localStorage.clear();
         </code>
     </pre>
-    <p><strong>Note : </strong>The localStorage.setItem data is shown in the browser's developer tools under the "Application" or "Storage" tab.<br>
-     localStorage.getItem data is retrieved from the browser's local storage and can be accessed through the console or used in your JavaScript code.
+    <p><strong>Note : </strong>The localStorage.setItem data is shown in the browser's developer tools under the
+        "Application" or "Storage" tab.<br>
+        localStorage.getItem data is retrieved from the browser's local storage and can be accessed through the console
+        or used in your JavaScript code.
     </p>
 
 
@@ -50,16 +72,26 @@
         // localstrorage :
         let name = "sanjay";
         let email = "sanjay@example.com";
+        let password = "1234";
         localStorage.setItem("name", name); //to set data in localStorage
         localStorage.setItem("email", email); //to set data in localStorage
-        
+        localStorage.setItem("password", password); //to set data in localStorage
+
         // to get data from localStorage :
         let getName = localStorage.getItem("name");
         let getemail = localStorage.getItem("email");
+        let getpassword = localStorage.getItem("password");
         console.log(getName);
         console.log(getemail);
-        
-        
+        console.log(getpassword);
+
+        // to remove data from localStorage :
+        localStorage.removeItem("email");
+
+        // to clear all data from localStorage :
+        localStorage.clear();
+
     </script>
 </body>
+
 </html>
