@@ -17,7 +17,7 @@
         <li>sessionStorage (Temporary storage)</li>
     </ul>
 
-    <h3>1. localStorage</h3>
+    <h3>1. localStorage :</h3>
     <pre>
     //To store data <br>
     syntax : <br>
@@ -60,6 +60,30 @@
         localStorage.clear();
         </code>
     </pre>
+
+    <h3>2. sessionStorage :</h3>
+    <pre>
+        <code>
+        //Session storage :
+        sessionStorage.setItem("name", "pen");
+        sessionStorage.setItem("price", 100);
+        sessionStorage.setItem("quantity", 20);
+
+        // to get data from sessionStorage :
+        let a = sessionStorage.getItem("price");
+        console.log(a);
+        let b = sessionStorage.getItem("name");
+        console.log(b);
+        let c = sessionStorage.getItem("quantity");
+        console.log(c);
+
+        // to remove data from sessionStorage :
+        sessionStorage.removeItem("price");
+
+        // to clear all data from sessionStorage :
+        sessionStorage.clear();
+        </code>
+    </pre>
     <p><strong>Note : </strong>The localStorage.setItem data is shown in the browser's developer tools under the
         "Application" or "Storage" tab.<br>
         localStorage.getItem data is retrieved from the browser's local storage and can be accessed through the console
@@ -90,6 +114,26 @@
 
         // to clear all data from localStorage :
         localStorage.clear();
+
+
+        //Session storage :
+        sessionStorage.setItem("name", "pen");
+        sessionStorage.setItem("price", 100);
+        sessionStorage.setItem("quantity", 20);
+
+        // to get data from sessionStorage :
+        let a = sessionStorage.getItem("price");
+        console.log(a);
+        let b = sessionStorage.getItem("name");
+        console.log(b);
+        let c = sessionStorage.getItem("quantity");
+        console.log(c);
+
+        // to remove data from sessionStorage :
+        sessionStorage.removeItem("price");
+
+        // to clear all data from sessionStorage :
+        sessionStorage.clear();
 
     </script>
 </body>
