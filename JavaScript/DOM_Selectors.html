@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Selectors</title>
+</head>
+<body>
+    <h1 >DOM Selectors : </h1>
+    <ul>
+        <li>document.getElementById()</li>
+        <li>document.getElementsByClassName()</li>
+        <li>document.getElementsByTagName()</li>
+        <li>document.querySelector()</li>
+        <li>document.querySelectorAll()</li>
+    </ul>
+    
+    <h1 id="byid">document.getElementById()</h1>
+    <p>document.getElementById() method is used to target element by id and it return single element.</p>
+    <p id="para"></p>
+    <pre>
+        <code>
+        let a = document.getElementById("byid");
+        a.style.color = "blue";
+        a.style.fontSize = "30px";
+        a.style.fontFamily = "Arial, sans-serif";
+        a.style.backgroundColor = "lightgray" ;
+        let para = document.getElementById("para");
+        para.innerText = "This is a paragraph with id 'para' and it is styled using JavaScript DOM selector getElementById() method.";
+        </code>
+    </pre><hr>
+
+    <h1 class="byclass">document.getElementsByClassName()</h1>
+    <p class="byclass">document.getElementsByClassName() is used to target elements by class name and it return HTML collections like an array.</p>
+
+    <pre>
+        <code>
+        let b =document.getElementsByClassName("byclass");
+        b[0].style.color = "green";
+        b[0].style.backgroundColor ="lightgray";
+        b[1].style.color = "red";
+        </code>
+    </pre><hr>
+
+    <h2>document.getElementsByTagName()</h2>
+    <h3>document.getElementsByTagName() is used to target elements by tag name and it return HTML collections.</h3>
+    <pre>
+        <code>
+        let c = document.getElementsByTagName("h2");
+        c[0].style.color = "purple";
+        let d = document.getElementsByTagName("h3");
+        d[0].style.backgroundColor = "lightblue";
+        d[0].style.fontStyle = "italic";
+        </code>
+    </pre>
+
+    <script>
+        let a = document.getElementById("byid");
+        a.style.color = "blue";
+        a.style.fontSize = "30px";
+        a.style.fontFamily = "Arial, sans-serif";
+        a.style.backgroundColor = "lightgray" ;
+        let para = document.getElementById("para");
+        para.innerText = "This is a paragraph with id 'para' and it is styled using JavaScript DOM selector getElementById() method.";
+
+
+        let b =document.getElementsByClassName("byclass");
+        b[0].style.color = "green";
+        b[0].style.backgroundColor ="lightgray";
+        b[1].style.color = "red";
+      
+        let c = document.getElementsByTagName("h2");
+        c[0].style.color = "purple";
+        let d = document.getElementsByTagName("h3");
+        d[0].style.backgroundColor = "lightblue";
+        d[0].style.fontStyle = "italic";
+    </script>
+</body>
+</html>
