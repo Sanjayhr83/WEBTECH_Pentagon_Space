@@ -52,7 +52,35 @@
         d[0].style.backgroundColor = "lightblue";
         d[0].style.fontStyle = "italic";
         </code>
+    </pre><hr>
+
+    <h2>document.querySelector()</h2>
+    <p id="qselector">document.querySelector() is used to target HTML element using CSS selector and it returns single element.</p>
+    <p id="qselector0"></p>
+    <pre>
+        <code>
+        let e = document.querySelector("#qselector");
+        e.style.color = "darkorange";
+
+        let f = document.querySelector("#qselector0");
+        f.innerText = "it is select using css id selector"
+        </code>
+    </pre><hr>
+
+    <h2>document.querySelectorAll()</h2>
+    <p class="head">HTML5</p>
+    <p class="head">CSS3</p>
+    <p class="head">JS</p>
+    <pre>
+        <code>
+        let g =document.querySelectorAll(".head");
+        g[0].style.fontFamily = "Arial, sans-serif";
+        g[1].style.color ="darkgoldenrod";
+        g[2].style.innerText = "JS";
+        g[2].style.color = "darkblue"; 
+        </code>
     </pre>
+
 
     <script>
         let a = document.getElementById("byid");
@@ -74,6 +102,18 @@
         let d = document.getElementsByTagName("h3");
         d[0].style.backgroundColor = "lightblue";
         d[0].style.fontStyle = "italic";
+
+        let e = document.querySelector("#qselector");
+        e.style.color = "darkorange";
+
+        let f = document.querySelector("#qselector0");
+        f.innerText = "it is select using css id selector"
+
+        let g =document.querySelectorAll(".head");
+        g[0].style.fontFamily = "Arial, sans-serif";
+        g[1].style.color ="darkgoldenrod";
+        g[2].style.innerText = "JS";
+        g[2].style.color = "darkblue";
     </script>
 </body>
 </html>
