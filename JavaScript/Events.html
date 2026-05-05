@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1>Events in js</h1>
+    <p>Event handling allows us to execute javascript code in response to user actions or browser events.</p>
+    <h2>Types of Events</h2>
+    <ul>
+        <li><strong>mouse events :</strong> click, dblclick, mouse over, mouse down, mouse up...etc</li>
+        <li><strong>keyboard events :</strong> keydown, keyup, keypress.</li>
+        <li><strong>form events :</strong> submit, focus, input...etc</li>
+        <li><strong>window events :</strong> scroll, resize, load, unload...etc</li>
+    </ul>
+
+    <h2>Here two ways to handle the events</h2>
+    <ul>
+        <li>1. Inline event handlers</li>
+        <li>2. Event listeners</li>
+    </ul>
+
+    <h3>1. Inline event handlers</h3>
+    <p>Drawback of inline event handlers: <br>1.we cannot attach multiple event listeners to a single element<br>2.it
+        mixes both HTML and JS code.</p>
+    <pre>
+        <code>
+            
+        </code>
+    </pre>
+
+    <h3>2.addEventListener()</h3>
+    <p>•This method provides flexible way to handle events <br>•we can attach same events multiple times to single
+        events.</p>
+    syntax : element_name.addEventListener("event",function);
+    <pre>
+        <code>
+        let button = document.getElementById("btn");
+        button.addEventListener("click", ()=>{
+            console.log("This is task A");
+        });
+        button.addEventListener("click", ()=>{
+            console.log("This is task B");
+        });
+        </code>
+    </pre>
+
+    <button id="btn">click me</button><br>
+    <hr>
+
+    <h2>Example for keyboard events(keypress,keydown,keyup)</h2>
+    <input type="text" id="user">
+    <ul>
+        <li>keydown : Fires when a key is pressed down. fires for all keys like letters,ctrl,alt,shift,arrows</li>
+        <li>keypress : Fires when a key is pressed and released. works only for pritable charaters and doesn't detect
+            key like ctrl,alt,shift,arrow</li>
+        <li>keyup : Fires when a key is released. fires once after release, good for final input detection.</li>
+    </ul>
+    <pre>
+        <code>
+        let user = document.getElementById("user")
+        user.addEventListener("keydown", (e) => {
+            console.log(e.key);
+        });
+        // code for keyup
+        let user = document.getElementById("user")
+        user.addEventListener("keyup", (e)=>{
+            console.log(e.key);
+        });
+        // code for keypress
+        let user = document.getElementById("user")
+        user.addEventListener("keypress", (e)=>{
+            console.log(e.key);
+        });
+        </code>
+    </pre>
+    <h5>simple key movement code :</h5>
+    <input type="text" id="user1">
+    <pre>
+        <code>
+        let user1= document.getElementById("user1")
+        user1.addEventListener("keydown", (e) => {
+            if (e.key=="a"){
+                console.log("move left")
+            }else if (e.key=="d"){
+                console.log("move right")
+            }else if (e.key=="w"){
+                console.log("move up")
+            }else if (e.key=="s"){
+                console.log("move down")
+            }else{
+                console.log("invalid key")
+            }
+        });
+        </code><hr>
+    </pre>
+
+
+    <h2>Example for form handling[submit event] :</h2>
+    <p>• by default form will reload to page <br>• by default form will try to connect server <br>• To stop this
+        behaviour we use <strong>.preventDefault()</strong> Method.</p>
+
+    <body>
+        <form action="" id="handleform">
+            <input type="text" id="user">
+            <button>Add</button>
+        </form>
+        <pre>
+        <code>
+        let form = document.getElementById("handleform")
+        form.addEventListener("submit", (e) => {
+            e.preventDefault() //stope page reload
+
+            let user = document.getElementById("user").VALUE
+            console.log(user);
+            (user)
+        })
+        </code><hr>
+    </pre>
+
+        <script>
+            let button = document.getElementById("btn");
+            button.addEventListener("click", () => {
+                console.log("This is task A");
+            });
+            button.addEventListener("click", () => {
+                console.log("This is task B");
+            });
+
+            //example for keyboard events
+            let user = document.getElementById("user")
+            user.addEventListener("keydown", (e) => {
+                console.log(e.key);
+            })
+
+            let user1 = document.getElementById("user1")
+            user1.addEventListener("keydown", (e) => {
+                if (e.key == "a") {
+                    console.log("move left")
+                } else if (e.key == "d") {
+                    console.log("move right")
+                } else if (e.key == "w") {
+                    console.log("move up")
+                } else if (e.key == "s") {
+                    console.log("move down")
+                } else {
+                    console.log("invalid key")
+                }
+            });
+
+            //example for submit event
+            let form = document.getElementById("handleform")
+            form.addEventListener("submit", (e) => {
+                e.preventDefault()  //stope page reload
+
+                let user = document.getElementById("user").VALUE
+                console.log(user);
+                (user)
+            })
+        </script>
+    </body>
+
+</html>
