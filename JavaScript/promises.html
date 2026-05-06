@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <center>
+        <h1>Promises in JS</h1>
+    </center>
+    <p>A Promise is an object that represents the future result of an asynchronous operation.<br> <br>
+        <strong>Real-world Analogy:</strong> imagine ordering online food : <br>
+        Order placed → Pending <br>
+        Food delivered → Fulfilled <br>
+        Order cancelled → Rejected <br>
+    </p>
+
+    <p>
+        🔄 Promise States <br>
+        A Promise has 3 states: <br>
+    <pre>
+        | State     | Meaning |
+        | --------- | ----------------------- |
+        | Pending   | Operation still running |
+        | Fulfilled | Operation successful    |
+        | Rejected  | Operation failed        |
+        </pre>
+    </p>
+
+    <p>🧱 Creating a Promise : <br>
+        Syntax : <br>
+        let promise = new Promise((resolve, reject) => { });<br>
+        <br>
+
+        simple example : <br>
+        let promise = new Promise((resolve, reject) => { <br>
+
+        let success = true;<br>
+
+        if(success) {<br>
+        resolve("Task completed");<br>
+        } else {<br>
+        reject("Task failed");<br>
+        }<br>
+        });
+    </p>
+
+    <p>
+        🔹 resolve() and reject() <br>
+    <pre>
+            | Function    | Purpose        |
+            | ----------- | -------------- |
+            | `resolve()` | Success result |
+            | `reject()`  | Failure result |
+
+        </pre>
+    </p>
+
+    <p>
+        🔹 Handling Promises <br><br>
+
+        ✅ .then() → Success <br>
+        promise.then(result => { <br>
+        console.log(result); <br>
+        }); <br> <br>
+
+        ❌ .catch() → Error <br>
+        promise.catch(error => { <br>
+        console.log(error); <br>
+        }); <br><br>
+
+        🔁 .finally() <br>
+        promise.finally(() => { <br>
+        console.log("Finished");<br>
+        });<br>
+    </p>
+
+    <p>
+        Full example :
+    <pre>
+        let promise = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                resolve("Data received");
+            }, 2000);
+
+        });
+
+        promise
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+        .finally(() => console.log("Done"));
+    </pre>
+    🔍 Output After 2 Seconds <br>
+    Data received <br>
+    Done
+    </p><br>
+
+
+    <p>💡 Easy Memory Trick :
+    <pre>
+            Promise = Future value
+            then() = success
+            catch() = failure
+            finally() = always run
+        </pre>
+    </p>
+
+    <p>
+        Real example(fake API) :
+    <pre>
+            function fetchData() {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve("User data loaded");
+                    }, 3000);
+                });
+            }
+            fetchData()
+            .then(data => console.log(data))
+            .catch(err => console.log(err));    
+        </pre>
+    </p>
+
+    <p>Code to fatch data using API
+    <pre>
+    fetch("https://dummyjson.com/products")
+    .then(x => x.json())
+    .then(y => console.log(y))
+    .catch(err => console.log("something wrong"));
+    </pre>
+    Easy work Flow :
+    <pre>
+            fetch data
+                 ↓
+            response comes
+                 ↓
+            convert to JSON
+                 ↓
+            print data
+                 ↓
+            if failed → show error
+        </pre>
+    </p>
+
+
+
+
+
+
+
+
+    <script>
+        let promise = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+                resolve("Data received");
+            }, 2000);
+
+        });
+
+        promise
+            .then(data => console.log(data))
+            .catch(err => console.log(err))
+            .finally(() => console.log("Done"));
+
+            
+        //fetch data from API
+        fetch("https://dummyjson.com/products")
+            .then(x => x.json())
+            .then(y => console.log(y))
+            .catch(err => console.log("something wrong"));
+    </script>
+
+</body>
+
+</html>
