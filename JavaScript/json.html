@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON-stringify & parse()</title>
+</head>
+
+<body>
+    <center>
+        <h1>JSON :</h1>
+    </center>
+    <p>
+        JSON stands for: JavaScript Object Notation <br>
+
+        It is a lightweight data format used to store and exchange data between: <br>
+
+        Browser ↔ Server <br>
+        Frontend ↔ Backend <br>
+        APIs ↔ Applications <br>
+
+    <pre>
+            Simple Definition : JSON is a way to write data in key : value format.
+
+Example:
+
+{
+  "name": "Sanjay",
+  "age": 21,
+  "city": "Bangalore"
+}
+
+Here:
+
+"name" → key
+"Sanjay" → value
+        </pre>
+    Why JSON is Used : <br>
+
+    Because it is: <br>
+
+    ✅ Simple <br>
+    ✅ Easy to read <br>
+    ✅ Easy to send over internet <br>
+    ✅ Supported by almost all programming languages <br>
+
+    That’s why APIs mostly send data in JSON format. <br>
+
+    JSON Rules <br>
+    Rule 1: Data is in key-value pairs <br>
+    { <br>
+    "name": "John" <br>
+    } <br>
+    Rule 2: Keys must be inside double quotes <br>
+
+    ✅ Correct <br>
+
+    { <br>
+    "name": "John" <br>
+    } <br>
+
+    ❌ Wrong <br>
+
+    { <br>
+    name: "John" <br>
+    } <br>
+    Rule 3: String values also use double quotes <br>
+    { <br>
+    "city": "Delhi" <br>
+    } <br>
+    Rule 4: Multiple values separated by comma <br>
+    { <br>
+    "name": "John", <br>
+    "age": 25 <br>
+    } <br>
+    JSON Data Types <br>
+    Type Example <br>
+    String "name": "Sanjay" <br>
+    Number "age": 21 <br>
+    Boolean "isStudent": true <br>
+    Array "skills": ["HTML", "CSS"] <br>
+    Object "address": {"city": "Bangalore"} <br>
+    Null "phone": null <br> <br>
+    Example of Full JSON <br>
+    { <br>
+    "name": "Sanjay", <br>
+    "age": 21, <br>
+    "isStudent": true, <br>
+    "skills": ["HTML", "CSS", "JavaScript"], <br>
+    "address": { <br>
+    "city": "Bangalore", <br>
+    "pincode": 560001 <br>
+    } <br>
+    } <br>
+    JSON vs JavaScript Object <br>
+
+    Very important 👇 <br>
+
+    JavaScript Object <br>
+    let user = { <br>
+    name: "Sanjay", <br>
+    age: 21 <br>
+    } <br>
+    JSON <br>
+    { <br>
+    "name": "Sanjay", <br>
+    "age": 21 <br>
+    } <br>
+
+    Difference: <br>
+
+    JavaScript Object JSON <br>
+    Keys may not need quotes Keys need double quotes <br>
+    Used inside JS code Used for data transfer <br>
+    JSON in Fetch API <br>
+
+    Example: <br>
+
+    fetch("https://dummyjson.com/products") <br>
+    .then(response => response.json()) <br>
+    .then(data => console.log(data)) <br>
+    <br>
+    Here: <br>
+
+    response.json() <br>
+
+    means: <br>
+
+    👉 Convert server response into JSON data <br>
+    </p>
+
+    <p>
+        <center>
+            <h3>json.stringify() </h3>
+        </center>
+        json.stringify(): it is convert js objects into json data [JSON string] <br>
+
+        <center>
+            <h3>json.parse() </h3>
+        </center>
+        json.parse(): it converts json string back to js objects <br>
+
+        Example for json.stringify() & json.parse()
+    <pre>
+            <code>
+            let users = [{
+            name: "sanju",
+            password: "12345"
+        },
+        {
+            name: "abhi",
+            password: "123456"
+        },
+        {
+            name: "raghu",
+            password: "15243"
+        }]
+
+        //coverting js object to json string
+        localStorage.setItem("users", JSON.stringify(users))
+
+        //converting json string back to js objeect
+        let userdata = JSON.parse(localStorage.getItem("users"))
+        console.log(userdata);
+            </code>
+        </pre>
+    </p>
+
+
+    <script>
+        let users = [{
+            name: "sanju",
+            password: "12345"
+        },
+        {
+            name: "abhi",
+            password: "123456"
+        },
+        {
+            name: "raghu",
+            password: "15243"
+        }]
+
+        //coverting js object to json string
+        localStorage.setItem("users", JSON.stringify(users))
+
+        //converting json string back to js objeect
+        let userdata = JSON.parse(localStorage.getItem("users"))
+        console.log(userdata);
+
+    </script>
+</body>
+
+</html>
